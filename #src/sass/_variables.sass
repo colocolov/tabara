@@ -1,0 +1,26 @@
+$white: #FFFFFF
+$black: #000000
+$bgc: #22646E
+$text: #FFFFFF
+$green: #A7FF4F
+
+// добавлять и удалять
+$gradient-dark: linear-gradient(180deg, #002535 0%, transparent 100%) #003851
+$gradient-bottom: linear-gradient(180deg, #002535 0%, transparent 100%) #22646E
+$gradient-top: linear-gradient(180deg, #22646E 0%, transparent 100%) #002535
+
+// анимация
+$cubic: all 0.7s cubic-bezier(0.76, -0.76, 0.25, 1.26)
+
+// ширина скролла по умолчанию
+:root
+  --widthscrollbar: 17px
+
+%body
+  font-family: 'Helvetica', sans-serif
+  @include font(400, 16, 29)
+  //font-family: 'Spectral', serif !!!!!!!!!!!!!!
+
+%head
+  font-family: 'Helvetica', sans-serif
+  @include font(700, 100, 95)
