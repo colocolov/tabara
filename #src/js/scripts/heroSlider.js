@@ -2,7 +2,7 @@
 const heroSlider = new Swiper(".hero__slider", {
   // loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 4000,
   },
   //скорость переключения слайдов
   speed: 800,

@@ -1,7 +1,7 @@
 // мобильное меню
 
 //выпадающее меню для мобильных устройств
-document.addEventListener("click", documentActions);
+//document.addEventListener("click", documentActions);
 
 function documentActions(e) {
   const targetElement = e.target;
@@ -49,7 +49,7 @@ const isMobile = {
 
 if (isMobile.any()) {
   // document.querySelector('html').classList.add('_touch');
-  document.body.classList.add("_touch");
+  // document.body.classList.add("_touch");
 }
 
 // меню бургер
@@ -58,7 +58,7 @@ const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
-    document.body.classList.toggle("_lock");
+    //document.body.classList.toggle("_lock");
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
   });
@@ -67,7 +67,7 @@ if (iconMenu) {
 if (menuLink.length) {
   menuLink.forEach((item) => {
     item.addEventListener("click", () => {
-      document.body.classList.remove("_lock");
+      //document.body.classList.remove("_lock");
       iconMenu.classList.remove("_active");
       menuBody.classList.remove("_active");
     });
