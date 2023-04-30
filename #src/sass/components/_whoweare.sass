@@ -1,0 +1,43 @@
+.whoweare
+  height: 100vh
+  &__container
+    height: 100vh
+    position: relative
+    padding-top: 185px
+    padding-bottom: 140px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &::before
+      content: ''
+      position: absolute
+      top: 20px
+      right: 20px
+      width: 526px
+      height: 206px
+      background-color: rgba($bgc, 0.1)
+    &::after
+      content: ''
+      position: absolute
+      bottom: 20px
+      left: 20px
+      width: 690px
+      height: 206px
+      background-color: rgba($bgc, 0.1)
+  &__head
+    margin-bottom: 50px
+  &__info
+    display: flex
+    column-gap: 20px
+    flex-wrap: wrap
+    justify-content: flex-end
+    // margin: 0 -15px
+  &__text
+    flex: 0 1 23.9%
+    min-width: 250px
+    border-top: 2px solid $white
+      // padding: 0 25px
+    padding-top: 10px
+  &__btn
+    // display: block
+    margin-top: 30px
