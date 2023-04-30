@@ -1,1 +1,19 @@
 .header
+  padding: 27px 0
+  position: absolute
+  top: 0
+  // left: 50%
+  // transform: translateX(-50%)
+  z-index: 5
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__logo
+    width: 94px
+    font-family: 'Spectral'
+    @include font(700, 24, 22)
+    color: $white
+  &__menu
+    display: block
+
