@@ -1493,6 +1493,63 @@ input {
   margin-top: 30px;
 }
 
+.misiunea {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -o-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+}
+.misiunea__container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.misiunea__head {
+  padding-left: 25.35%;
+  margin-bottom: 170px;
+}
+.misiunea__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+.misiunea__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 23.9%;
+  flex: 0 1 23.9%;
+  min-width: 250px;
+  border-top: 2px solid #FFFFFF;
+  padding-top: 15px;
+  padding-left: 17px;
+  cursor: pointer;
+}
+.misiunea__item p {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 0.9615384615;
+}
+.misiunea__item p:not(:last-child) {
+  margin-bottom: 20px;
+}
 @media (min-width: 992px) {
   .menu__item:hover::before {
     width: 100%;
