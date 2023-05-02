@@ -1498,9 +1498,9 @@ input {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transition: background-image 0.3s ease-in-out;
-  -o-transition: background-image 0.3s ease-in-out;
-  transition: background-image 0.3s ease-in-out;
+  -webkit-transition: background-image 0.3s ease-out 0s;
+  -o-transition: background-image 0.3s ease-out 0s;
+  transition: background-image 0.3s ease-out 0s;
 }
 .misiunea__container {
   height: 100vh;
@@ -1572,8 +1572,31 @@ input {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+.blog__container::before {
+  content: "";
+  position: absolute;
+  top: 226px;
+  right: 0;
+  width: 206px;
+  height: 320px;
+  background-color: rgba(34, 100, 110, 0.1);
+}
+.blog__container::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 526px;
+  height: 206px;
+  background-color: rgba(34, 100, 110, 0.1);
+}
 .blog__slider {
   margin-left: 0;
+  height: 420px;
+  width: 100%;
+}
+.blog__slider-wrap {
+  height: 420px;
 }
 .blog__slide {
   display: -webkit-box;
@@ -1585,6 +1608,8 @@ input {
 }
 .blog__image {
   margin-right: 75px;
+  width: 690px;
+  height: 420px;
 }
 .blog__info {
   display: -webkit-box;
@@ -1607,6 +1632,42 @@ input {
 .blog__slide-btn {
   font-size: 20px;
 }
+.blog__navigation {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  z-index: 1;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.blog__navigation::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -360px;
+  width: 360px;
+  height: 2px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #fff;
+  z-index: -1;
+}
+
+.navigation__btn {
+  width: 250px;
+  height: 114px;
+  cursor: pointer;
+}
+.navigation__btn-fill {
+  width: 100%;
+  height: 100%;
+}
+.navigation__btn-next {
+  position: relative;
+}
+
 @media (min-width: 992px) {
   .menu__item:hover::before {
     width: 100%;

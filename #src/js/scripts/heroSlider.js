@@ -16,10 +16,10 @@ const heroSlider = new Swiper(".hero__slider", {
   },
 
   //эффект перехода слайда (только если показ по 1-му слайду)
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
 
   // переключение при клике на слайд
   slideToClickedSlide: true,
