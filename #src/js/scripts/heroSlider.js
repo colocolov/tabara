@@ -39,6 +39,9 @@ const heroSlider = new Swiper(".hero__slider", {
 });
 //----- END
 
+// номер текущего слайда
+console.log(heroSlider.realIndex);
+
 // количество слайдов на главной
 let heightScrollDefault = getComputedStyle(document.documentElement).getPropertyValue('--quantityHeroSlider');
 const quantitySliders = document.querySelector('.hero__pagination').children.length;

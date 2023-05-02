@@ -1192,6 +1192,96 @@ input {
   height: 0;
 }
 
+.fullheigth {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.home {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.home__header {
+  background-color: rgba(51, 51, 51, 0.5);
+  z-index: 10;
+}
+.home__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.home__screen {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  position: relative;
+}
+.home__pagination {
+  position: absolute;
+  top: 50%;
+  left: 50px !important;
+  right: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.home__bullet {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 5px 0;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+.home__bullet_active {
+  background-color: #A7FF4F;
+}
+.home__scroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color: rgba(167, 255, 79, 0.5);
+}
+.home__drag-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
 .header {
   padding: 27px 0;
   position: absolute;
@@ -1432,20 +1522,9 @@ input {
   height: 100vh;
 }
 .whoweare__container {
-  height: 100vh;
   position: relative;
   padding-top: 185px;
   padding-bottom: 140px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 .whoweare__container::before {
   content: "";
@@ -1501,19 +1580,6 @@ input {
   -webkit-transition: background-image 0.3s ease-in-out;
   -o-transition: background-image 0.3s ease-in-out;
   transition: background-image 0.3s ease-in-out;
-}
-.misiunea__container {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 .misiunea__head {
   padding-left: 25.35%;

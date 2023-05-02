@@ -4,10 +4,14 @@
   <body>
     <div class="wrapper">
       @include('html/header.html')
-      <main class="main">
-        @include('html/_hero.html')
-        @include('html/_whoweare.html')
-        @include('html/_misiunea.html')
+      <main class="main home">
+        <div class="home__wrapper">
+          @include('html/_hero.html')
+          @include('html/_whoweare.html')
+          @include('html/_misiunea.html')
+        </div>
+        <div class="home__pagination"></div>
+        <div class="home__scroll"></div>
       </main>
       @include('html/footer.html')
     </div>
