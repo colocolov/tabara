@@ -1550,6 +1550,63 @@ input {
 .misiunea__item p:not(:last-child) {
   margin-bottom: 20px;
 }
+.blog {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#002535), to(transparent)) #22646E;
+  background: -o-linear-gradient(top, #002535 0%, transparent 100%) #22646E;
+  background: linear-gradient(180deg, #002535 0%, transparent 100%) #22646E;
+}
+.blog__container {
+  height: 100vh;
+  position: relative;
+  padding-top: 185px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.blog__slider {
+  margin-left: 0;
+}
+.blog__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.blog__image {
+  margin-right: 75px;
+}
+.blog__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.blog__slide-head {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.1538461538;
+  margin-bottom: 15px;
+}
+.blog__slide-btn {
+  font-size: 20px;
+}
 @media (min-width: 992px) {
   .menu__item:hover::before {
     width: 100%;
