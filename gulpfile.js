@@ -185,8 +185,8 @@ function cssAdd() {
 
 function js() {
   return src([
-    // "node_modules/swiper/swiper-bundle.js",
-  path.src.js
+    "node_modules/swiper/swiper-bundle.js",
+    path.src.js
   ])
     .pipe(
       plumber({
