@@ -10,16 +10,18 @@ const heroSlider = new Swiper(".hero__slider", {
 
   // буллеты
   pagination: {
-    el: ".swiper-pagination",
+    el: ".hero__pagination",
     type: "bullets",
     clickable: true,
+    bulletClass: 'hero__bullet',
+    bulletActiveClass: 'hero__bullet_active',
   },
 
   //эффект перехода слайда (только если показ по 1-му слайду)
-  // effect: "fade",
-  // fadeEffect: {
-  //   crossFade: true,
-  // },
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
 
   // переключение при клике на слайд
   slideToClickedSlide: true,
@@ -36,6 +38,9 @@ const heroSlider = new Swiper(".hero__slider", {
   //   },
   // },
   //
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
 });
 //----- END
 

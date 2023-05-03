@@ -44,8 +44,8 @@ let blogulSlider = new Swiper(".blog__slider", {
   //   },
   // },
   //
-  // observer: true,
-  // observeParents: true,
-  // observeSlideChildren: true,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
 });
 //----- END

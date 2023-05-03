@@ -1,1 +1,30 @@
 .footer
+  background-color: $white
+  color: $black
+  @include font(400, 16, 29)
+  padding: 55px 0
+  // ps
+  // &__div
+  //   background-color: $bgc
+  //   height: 50px
+  &__container
+
+  &__info
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    column-gap: 25px
+
+  &__data
+    flex: 1 1 23%
+    &:nth-child(2),
+    &:nth-child(3)
+      text-align: center
+
+    &:last-child
+      // justify-content: flex-end
+      text-align: right
+
+
+  &__link
+    display: block

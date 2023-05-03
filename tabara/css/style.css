@@ -1263,7 +1263,6 @@ input {
   font-size: 26px;
   line-height: 0.7692307692;
   color: #FFFFFF;
-  text-transform: uppercase;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -1383,7 +1382,7 @@ input {
   content: "";
   position: absolute;
   height: 100%;
-  right: 1px;
+  right: 2px;
   top: 0;
   bottom: 0;
   width: 1px;
@@ -1410,22 +1409,23 @@ input {
   line-height: 1;
 }
 .hero__pagination {
-  right: 3px !important;
+  right: 0;
   top: 0 !important;
   width: 5px !important;
   left: auto !important;
 }
-.hero__pagination span {
+.hero__bullet {
+  display: block;
   width: 5px;
-  background: transparent !important;
-  height: calc(100% / var(--quantityHeroSlider));
-  border-radius: 5px !important;
+  background: transparent;
+  height: calc(100% / var(--quantityHeroSlider) + 2px);
+  border-radius: 5px;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-.hero__pagination span.swiper-pagination-bullet-active {
-  background: #FFFFFF !important;
+.hero__bullet_active {
+  background: #FFFFFF;
 }
 
 .whoweare {
@@ -1498,9 +1498,9 @@ input {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transition: background-image 0.3s ease-out 0s;
-  -o-transition: background-image 0.3s ease-out 0s;
-  transition: background-image 0.3s ease-out 0s;
+  -webkit-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
 }
 .misiunea__container {
   height: 100vh;
@@ -1700,7 +1700,26 @@ input {
   -ms-flex: 0 1 23.28%;
   flex: 0 1 23.28%;
   margin-right: 30px;
-  height: 100%;
+  height: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+.services__slider {
+  width: 690px;
+  margin-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1711,19 +1730,6 @@ input {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-.services__info p:not(:last-child) {
-  margin-bottom: 230px;
-}
-.services__slider {
-  width: 690px;
-  margin-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 .services__slider-wrap {
   height: 420px;
@@ -1784,12 +1790,6 @@ input {
   text-align: center;
 }
 .services__navigation {
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1799,6 +1799,10 @@ input {
   -webkit-column-gap: 108px;
   -moz-column-gap: 108px;
   column-gap: 108px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 47px;
 }
 .services__nav {
   width: 250px;
@@ -1814,8 +1818,40 @@ input {
   width: 100%;
   height: 100%;
 }
-.services__nav-next {
-  position: relative;
+.footer {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8125;
+  padding: 55px 0;
+}
+.footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-column-gap: 25px;
+  -moz-column-gap: 25px;
+  column-gap: 25px;
+}
+.footer__data {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 23%;
+  flex: 1 1 23%;
+}
+.footer__data:nth-child(2), .footer__data:nth-child(3) {
+  text-align: center;
+}
+.footer__data:last-child {
+  text-align: right;
+}
+.footer__link {
+  display: block;
 }
 
 @media (min-width: 992px) {
