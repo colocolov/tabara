@@ -56,7 +56,7 @@ let homeSlider = new Swiper ('.home', {
 
   // События
   on: {
-    // сиботые инициализации
+    // событие инициализации
     init: function() {
       menuSlider();
     },
