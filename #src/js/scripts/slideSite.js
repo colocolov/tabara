@@ -50,4 +50,51 @@ let homeSlider = new Swiper ('.home', {
     dragClass: 'home__drag-scroll',
     draggable: true,
   },
+
+  // откл автоинициализацию
+  init: false,
+
+  // События
+  on: {
+    // сиботые инициализации
+    init: function() {
+      menuSlider();
+    },
+    // событие смены слайда
+    slideChange: function () {
+      menuSliderRemove();
+      menuLinks[homeSlider.realIndex].classList.add('_active');
+    },
+  },
 });
+
+// переход по меню
+let menuLinks = document.querySelectorAll('.menu__item');
+function menuSlider() {
+  if (menuLinks.length > 0) {
+    menuLinks[homeSlider.realIndex].classList.add('_active');
+    for (let index = 0; index < menuLinks.length; index++){
+      const menuItem = menuLinks[index];
+      menuItem.addEventListener('click', function (e) {
+        e.preventDefault();
+        // console.log(menuItem);
+        menuSliderRemove();
+        homeSlider.slideTo(index, 800);
+        menuItem.classList.add('_active');
+      });
+    }
+  }
+}
+
+// удаление активного класса у ссылки
+function menuSliderRemove() {
+  let menuLinkActive = document.querySelector('.menu__item._active');
+  if (menuLinkActive) {
+    // console.log('YES');
+    // console.log(menuLinkActive);
+    menuLinkActive.classList.remove('_active');
+  }
+}
+
+// инициализация слайда
+homeSlider.init();

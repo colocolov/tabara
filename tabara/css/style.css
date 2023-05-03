@@ -1372,6 +1372,9 @@ input {
   -o-transition: width 0.5s ease;
   transition: width 0.5s ease;
 }
+.menu__item._active {
+  color: #A7FF4F !important;
+}
 @media (max-width: 768px) {
   .menu__item {
     margin-bottom: 40px;
@@ -1822,7 +1825,7 @@ input {
   font-family: "Spectral", serif;
   font-weight: 600;
   font-size: 46px;
-  line-height: 1.5217391304;
+  line-height: 1.347826087;
   z-index: 5;
   border-radius: 50%;
   border: 2px solid #FFFFFF;
