@@ -1067,7 +1067,7 @@ body {
 }
 
 .heading {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Spectral", serif;
   font-weight: 700;
   font-size: 100px;
   line-height: 0.95;
@@ -1450,20 +1450,16 @@ input {
 .whoweare__container::before {
   content: "";
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 526px;
-  height: 206px;
-  background-color: rgba(34, 100, 110, 0.1);
-}
-.whoweare__container::after {
-  content: "";
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 690px;
-  height: 206px;
-  background-color: rgba(34, 100, 110, 0.1);
+  top: 100px;
+  right: 0;
+  background: #BFD2D9;
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  -webkit-transform: rotate(-27.49deg);
+  -ms-transform: rotate(-27.49deg);
+  transform: rotate(-27.49deg);
+  width: 500px;
+  height: 144px;
 }
 .whoweare__head {
   margin-bottom: 50px;
@@ -1489,10 +1485,9 @@ input {
   border-top: 2px solid #FFFFFF;
   padding-top: 10px;
 }
-.whoweare__btn {
-  margin-top: 30px;
+.whoweare__text p:not(:last-child) {
+  margin-bottom: 30px;
 }
-
 .misiunea {
   height: 100vh;
   background-position: center;
@@ -1501,6 +1496,18 @@ input {
   -webkit-transition: all 0.1s linear 0s;
   -o-transition: all 0.1s linear 0s;
   transition: all 0.1s linear 0s;
+  position: relative;
+}
+.misiunea::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 37, 53, 0.8);
+  z-index: 0;
 }
 .misiunea__container {
   height: 100vh;
@@ -1514,6 +1521,8 @@ input {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 .misiunea__head {
   padding-left: 25.35%;
@@ -1543,7 +1552,8 @@ input {
   cursor: pointer;
 }
 .misiunea__item p {
-  font-weight: 400;
+  font-family: "Spectral", serif;
+  font-weight: 600;
   font-size: 52px;
   line-height: 0.9615384615;
 }
@@ -1575,20 +1585,16 @@ input {
 .blog__container::before {
   content: "";
   position: absolute;
-  top: 226px;
+  top: 130px;
   right: 0;
-  width: 206px;
-  height: 320px;
-  background-color: rgba(34, 100, 110, 0.1);
-}
-.blog__container::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: 0;
-  width: 526px;
-  height: 206px;
-  background-color: rgba(34, 100, 110, 0.1);
+  background: #BFD2D9;
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  -webkit-transform: rotate(-27.49deg);
+  -ms-transform: rotate(-27.49deg);
+  transform: rotate(-27.49deg);
+  width: 500px;
+  height: 144px;
 }
 .blog__slider {
   margin-left: 0;
@@ -1607,7 +1613,7 @@ input {
   align-items: center;
 }
 .blog__image {
-  margin-right: 75px;
+  margin-right: 12.4%;
   width: 690px;
   height: 420px;
 }
@@ -1645,8 +1651,8 @@ input {
   content: "";
   position: absolute;
   top: 50%;
-  left: -360px;
-  width: 360px;
+  left: -292px;
+  width: 116.9%;
   height: 2px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1664,10 +1670,6 @@ input {
   width: 100%;
   height: 100%;
 }
-.navigation__btn-next {
-  position: relative;
-}
-
 .services {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#22646E), to(transparent)) #002535;
@@ -1688,6 +1690,9 @@ input {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.services__head {
+  padding-left: 25.35%;
 }
 .services__wrapper {
   display: -webkit-box;
@@ -1819,8 +1824,8 @@ input {
   height: 100%;
 }
 .footer {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #003851;
+  color: #FFFFFF;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8125;

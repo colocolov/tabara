@@ -11,19 +11,23 @@
     &::before
       content: ''
       position: absolute
-      top: 20px
-      right: 20px
-      width: 526px
-      height: 206px
-      background-color: rgba($bgc, 0.1)
-    &::after
-      content: ''
-      position: absolute
-      bottom: 20px
-      left: 20px
-      width: 690px
-      height: 206px
-      background-color: rgba($bgc, 0.1)
+      top: 100px
+      right: 0
+      background: #BFD2D9
+      filter: blur(150px)
+      transform: rotate(-27.49deg)
+      width: 500px
+      height: 144px
+      // background-color: rgba($bgc, 0.1)
+
+    // &::after
+    //   content: ''
+    //   position: absolute
+    //   bottom: 20px
+    //   left: 20px
+    //   width: 690px
+    //   height: 206px
+    //   background-color: rgba($bgc, 0.1)
   &__head
     margin-bottom: 50px
   &__info
@@ -38,6 +42,8 @@
     border-top: 2px solid $white
       // padding: 0 25px
     padding-top: 10px
+    p:not(:last-child)
+      margin-bottom: 30px
   &__btn
     // display: block
-    margin-top: 30px
+    // margin-top: 30px
