@@ -3,21 +3,21 @@
 //выпадающее меню для мобильных устройств
 //document.addEventListener("click", documentActions);
 
-function documentActions(e) {
-  const targetElement = e.target;
-  if (window.innerWidth > 900) {
-    if (targetElement.classList.contains("menu__arrow")) {
-      targetElement.closest(".menu__item").classList.toggle("_hover");
-    }
-    if (
-      !targetElement.closest(".menu__item") &&
-      document.querySelectorAll(".menu__item._hover").length > 0
-    ) {
-      // console.log("ehhh");
-      // _removeClasses(document.querySelectorAll(".menu__item._hover"), "_hover");
-    }
-  }
-}
+// function documentActions(e) {
+//   const targetElement = e.target;
+//   if (window.innerWidth > 900) {
+//     if (targetElement.classList.contains("menu__arrow")) {
+//       targetElement.closest(".menu__item").classList.toggle("_hover");
+//     }
+//     if (
+//       !targetElement.closest(".menu__item") &&
+//       document.querySelectorAll(".menu__item._hover").length > 0
+//     ) {
+//       // console.log("ehhh");
+//       // _removeClasses(document.querySelectorAll(".menu__item._hover"), "_hover");
+//     }
+//   }
+// }
 
 // проверка, является ли уствройство мобильным
 const isMobile = {
@@ -47,10 +47,10 @@ const isMobile = {
   },
 };
 
-if (isMobile.any()) {
+// if (isMobile.any()) {
   // document.querySelector('html').classList.add('_touch');
   // document.body.classList.add("_touch");
-}
+// }
 
 // меню бургер
 const iconMenu = document.querySelector(".menu__icon");
@@ -64,9 +64,19 @@ if (iconMenu) {
   });
 }
 // закрытие при клике
+/**
+ * переделать на другую логику
+ * 1) отслеживать клик на menu__body как по меню так и по тел/соцсети
+ * 2) проверить через условие, если клик по меню/тел/сети то закрывать меню и делать переход
+ * 3) если клик вне меню то закрывать его
+ */
 if (menuLink.length) {
   menuLink.forEach((item) => {
-    item.addEventListener("click", () => {
+
+    console.log(item);
+    item.addEventListener("click", (e) => {
+      console.log(e.target);
+
       //document.body.classList.remove("_lock");
       iconMenu.classList.remove("_active");
       menuBody.classList.remove("_active");
