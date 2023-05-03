@@ -1580,15 +1580,9 @@ input {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-<<<<<<< HEAD
   -webkit-transition: all 0.1s linear 0s;
   -o-transition: all 0.1s linear 0s;
   transition: all 0.1s linear 0s;
-=======
-  -webkit-transition: background-image 0.3s ease-in-out;
-  -o-transition: background-image 0.3s ease-in-out;
-  transition: background-image 0.3s ease-in-out;
->>>>>>> 2df0fd597789a92b1d0e6c733eb80a0ecb1eda4e
 }
 .misiunea__head {
   padding-left: 25.35%;
