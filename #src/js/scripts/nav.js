@@ -73,7 +73,7 @@ if (iconMenu) {
 if (menuLink.length) {
   menuLink.forEach((item) => {
 
-    console.log(item);
+    // console.log(item);
     item.addEventListener("click", (e) => {
       console.log(e.target);
 
