@@ -1209,7 +1209,6 @@ input {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-right: 120px;
-  position: relative;
 }
 .header__logo {
   width: 94px;
@@ -1227,13 +1226,14 @@ input {
 }
 .menu__body {
   position: absolute;
-  top: -27px;
+  top: 0;
   right: -100%;
   width: 100%;
   height: 800px;
   padding: 150px 100px 50px;
-  background: url("../images/bg/hero.jpg") no-repeat center;
-  overflow: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#002535), to(transparent)) #003851;
+  background: -o-linear-gradient(top, #002535 0%, transparent 100%) #003851;
+  background: linear-gradient(180deg, #002535 0%, transparent 100%) #003851;
   -webkit-transition: right 0.5s ease-in 0s;
   -o-transition: right 0.5s ease-in 0s;
   transition: right 0.5s ease-in 0s;
@@ -1531,7 +1531,7 @@ input {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 23.9%;
   flex: 0 1 23.9%;
-  min-width: 250px;
+  min-width: 295px;
   border-top: 2px solid #FFFFFF;
   padding-top: 10px;
   padding-right: 3px;
@@ -1597,7 +1597,7 @@ input {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 23.9%;
   flex: 0 1 23.9%;
-  min-width: 250px;
+  min-width: 295px;
   border-top: 2px solid #FFFFFF;
   padding-top: 15px;
   cursor: pointer;
@@ -1663,9 +1663,11 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .blog__image {
-  margin-right: 11%;
   width: 690px;
   height: 420px;
 }
@@ -1680,6 +1682,7 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 140px;
 }
 .blog__slide-head {
   font-weight: 700;
@@ -1694,7 +1697,7 @@ input {
 .blog__navigation {
   position: absolute;
   top: 50%;
-  left: 79.5%;
+  right: 0;
   z-index: 1;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -1704,8 +1707,8 @@ input {
   content: "";
   position: absolute;
   top: 50%;
-  left: -276px;
-  width: 116.9%;
+  left: -50%;
+  width: 50%;
   height: 2px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1982,6 +1985,82 @@ input {
   }
   100% {
     left: -400px;
+  }
+}
+@media (max-width: 1280px) {
+  [class*=__container] {
+    padding-right: 80px;
+  }
+  .header__container {
+    padding-right: 130px;
+  }
+  .whoweare__container {
+    padding-top: 14.6%;
+    padding-bottom: 7%;
+  }
+  .whoweare__head {
+    margin-bottom: 15%;
+  }
+  .misiunea__container {
+    padding-top: 14%;
+    padding-bottom: 17%;
+  }
+  .misiunea__head {
+    padding-left: 0;
+    margin-bottom: 15.46%;
+  }
+  .misiunea__list {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .blog__container {
+    padding-top: 14.3%;
+  }
+  .blog__head {
+    margin-bottom: 16.5%;
+  }
+  .blog__navigation::before {
+    left: -122px;
+    width: 49%;
+  }
+  .services__container {
+    padding-top: 12%;
+  }
+  .services__head {
+    padding-left: 0;
+  }
+  .services__wrapper {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .services__navigation {
+    -webkit-column-gap: 103px;
+    -moz-column-gap: 103px;
+    column-gap: 103px;
+    margin-bottom: 38px;
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    position: fixed;
+    background-color: #22646E;
+    z-index: 100;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  body._lock {
+    overflow: hidden;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 7;
+    background-color: #000000;
   }
 }
 /*# sourceMappingURL=style.css.map */
