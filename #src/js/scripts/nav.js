@@ -56,13 +56,37 @@ const isMobile = {
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
+
+// ver 1
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
-    //document.body.classList.toggle("_lock");
-    iconMenu.classList.toggle("_active");
-    menuBody.classList.toggle("_active");
+    if (menuBody){
+      //document.body.classList.toggle("_lock");
+      iconMenu.classList.toggle("_active");
+      menuBody.classList.toggle("_active");
+    }
   });
 }
+// ver 2
+// document.addEventListener('click', function (e) {
+//   const targetElement = e.target;
+//   // console.log(targetElement.parentElement);
+//   if (iconMenu) {
+//   iconMenu.addEventListener("click", function (e) {
+//     if (menuBody){
+//       //document.body.classList.toggle("_lock");
+//       iconMenu.classList.toggle("_active");
+//       menuBody.classList.toggle("_active");
+//     }
+//   });
+// }
+//   if (targetElement.classList.contains('menu__body')) {
+//     iconMenu.classList.toggle("_active");
+//       menuBody.classList.toggle("_active");
+//   }
+// });
+
+
 // закрытие при клике
 /**
  * переделать на другую логику

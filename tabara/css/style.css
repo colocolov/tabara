@@ -1136,7 +1136,7 @@ input {
 }
 
 [class*=__container] {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 var(--containerPadding);
 }
@@ -1219,29 +1219,40 @@ input {
   line-height: 0.9166666667;
   color: #FFFFFF;
 }
-.header__menu {
-  display: block;
+.menu__social {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
 }
-
 .menu__body {
   position: absolute;
   top: -27px;
-  right: -100vw;
-  width: 500px;
-  height: 100vh;
-  padding: 150px 44px 50px 44px;
+  right: -100%;
+  width: 100%;
+  height: 800px;
+  padding: 150px 100px 50px;
+  background: url("../images/bg/hero.jpg") no-repeat center;
+  overflow: auto;
+  -webkit-transition: right 0.5s ease-in 0s;
+  -o-transition: right 0.5s ease-in 0s;
+  transition: right 0.5s ease-in 0s;
+}
+.menu__body._active {
+  right: 0;
+}
+.menu__body._active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#002535), to(transparent)) #003851;
   background: -o-linear-gradient(top, #002535 0%, transparent 100%) #003851;
   background: linear-gradient(180deg, #002535 0%, transparent 100%) #003851;
-  opacity: 0.9;
-  overflow: auto;
-  -webkit-transition: right 1s ease;
-  -o-transition: right 1s ease;
-  transition: right 1s ease;
-  border-left: 3px solid #FFFFFF;
-}
-.menu__body._active {
-  right: 102px;
+  opacity: 0.7;
 }
 .menu__list {
   display: -webkit-box;
@@ -1255,16 +1266,21 @@ input {
   -ms-flex-align: start;
   align-items: flex-start;
 }
+.menu__list:not(:last-child) {
+  margin-bottom: 120px;
+}
 .menu__item {
   position: relative;
   font-family: "Spectral", serif;
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 0.7692307692;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 0.9423076923;
   color: #FFFFFF;
+  text-transform: uppercase;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  letter-spacing: -5px;
 }
 .menu__item:not(:last-child) {
   margin-bottom: 39px;
@@ -1276,10 +1292,13 @@ input {
   bottom: -6px;
   width: 0%;
   height: 2px;
-  background-color: #FFFFFF;
+  background-color: #A7FF4F;
   -webkit-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
   transition: width 0.5s ease;
+}
+.menu__item._active::before {
+  width: 100%;
 }
 @media (max-width: 768px) {
   .menu__item {
@@ -1326,10 +1345,6 @@ input {
   right: 0;
   left: auto;
 }
-.menu__icon._active {
-  -webkit-animation: menuSpan 1s ease 0.3s forwards;
-  animation: menuSpan 1s ease 0.3s forwards;
-}
 .menu__icon._active span {
   -webkit-transition: all 0.4s cubic-bezier(0.76, -2.76, 2.25, 1.26);
   -o-transition: all 0.4s cubic-bezier(0.76, -2.76, 2.25, 1.26);
@@ -1347,6 +1362,32 @@ input {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   left: 0;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.social__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.social__item:not(:last-child) {
+  margin-right: 40px;
+}
+.social__icon {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+.social__icon svg {
+  height: 100%;
+  width: 100%;
 }
 
 .hero {
@@ -1398,6 +1439,17 @@ input {
 }
 .hero__slide-head {
   max-width: 590px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.hero__slide-head span:nth-child(even) {
+  margin-left: 70px;
 }
 .hero__slide-btn {
   margin-right: 20px;
