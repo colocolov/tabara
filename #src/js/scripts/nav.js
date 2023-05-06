@@ -56,6 +56,7 @@ const isMobile = {
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
+const menuSocial = document.querySelector(".menu__social.social__list");
 
 // ver 1
 if (iconMenu) {
@@ -67,43 +68,29 @@ if (iconMenu) {
     }
   });
 }
-// ver 2
-// document.addEventListener('click', function (e) {
-//   const targetElement = e.target;
-//   // console.log(targetElement.parentElement);
-//   if (iconMenu) {
-//   iconMenu.addEventListener("click", function (e) {
-//     if (menuBody){
-//       //document.body.classList.toggle("_lock");
-//       iconMenu.classList.toggle("_active");
-//       menuBody.classList.toggle("_active");
-//     }
-//   });
-// }
-//   if (targetElement.classList.contains('menu__body')) {
-//     iconMenu.classList.toggle("_active");
-//       menuBody.classList.toggle("_active");
-//   }
-// });
 
-
-// закрытие при клике
-/**
- * переделать на другую логику
- * 1) отслеживать клик на menu__body как по меню так и по тел/соцсети
- * 2) проверить через условие, если клик по меню/тел/сети то закрывать меню и делать переход
- * 3) если клик вне меню то закрывать его
- */
+// закрытие при клике по меню
 if (menuLink.length) {
   menuLink.forEach((item) => {
 
     // console.log(item);
     item.addEventListener("click", (e) => {
-      console.log(e.target);
-
-      //document.body.classList.remove("_lock");
-      iconMenu.classList.remove("_active");
-      menuBody.classList.remove("_active");
+      // console.log(e.target);
+      removeActiveClass();
     });
   });
+}
+
+// закрытие при клике по соцменю
+if (menuSocial) {
+  menuSocial.addEventListener('click', (e) => {
+    // console.log(e.target);
+    removeActiveClass();
+  });
+}
+
+function removeActiveClass () {
+    //document.body.classList.remove("_lock");
+  iconMenu.classList.remove("_active");
+  menuBody.classList.remove("_active");
 }
