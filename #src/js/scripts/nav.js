@@ -62,11 +62,11 @@ const menuSocial = document.querySelector(".menu__social.social__list");
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
     if (menuBody){
-      if (window.innerWidth < 993) {
-        const menuHeader = document.querySelector(".header__menu");
-        // console.log(menuHeader);
-        menuHeader.classList.toggle("_active");
-      }
+      // if (window.innerWidth < 993) {
+      //   const menuHeader = document.querySelector(".header__menu");
+      //   // console.log(menuHeader);
+      //   menuHeader.classList.toggle("_active");
+      // }
       //document.body.classList.toggle("_lock");
       iconMenu.classList.toggle("_active");
       menuBody.classList.toggle("_active");
