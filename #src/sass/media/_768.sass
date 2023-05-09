@@ -10,7 +10,12 @@
     left: 0
     width: 100%
     z-index: 7
-    background: $gradient-dark
+    background: rgba($bgc, 0.8)
+    padding: 15px 0
+  .header__container
+    padding-right: 50px
+  .header__logo
+    font-size: 18px
 
   .hero__slide
     flex-direction: column
@@ -18,6 +23,8 @@
     align-items: center
     &-head
       align-items: center
+  .hero__slide-head span:nth-child(even)
+    margin-left: 0
 
   .whoweare__container
     padding-bottom: 10%

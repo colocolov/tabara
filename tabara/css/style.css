@@ -1174,7 +1174,7 @@ input {
   color: #000000 !important;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: all 0.3s linear;
@@ -1234,7 +1234,7 @@ input {
   background: -webkit-gradient(linear, left top, left bottom, from(#002535), to(transparent)) #003851;
   background: -o-linear-gradient(top, #002535 0%, transparent 100%) #003851;
   background: linear-gradient(180deg, #002535 0%, transparent 100%) #003851;
-  opacity: 0.9;
+  opacity: 0.95;
   -webkit-transition: right 0.5s ease-in 0s;
   -o-transition: right 0.5s ease-in 0s;
   transition: right 0.5s ease-in 0s;
@@ -1254,6 +1254,17 @@ input {
   background: -o-linear-gradient(top, #002535 0%, transparent 100%) #003851;
   background: linear-gradient(180deg, #002535 0%, transparent 100%) #003851;
   opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .menu__body {
+    padding: 100px 15% 50px;
+  }
+}
+@media (max-width: 576px) {
+  .menu__body {
+    min-height: 700px;
+    height: auto;
+  }
 }
 .menu__list {
   display: -webkit-box;
@@ -1304,12 +1315,8 @@ input {
 @media (max-width: 768px) {
   .menu__item {
     margin-bottom: 40px;
-    font-weight: 800;
-    font-size: 18px;
-  }
-  .menu__item:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 10px;
+    font-size: 32px;
+    letter-spacing: -1px;
   }
 }
 .menu__icon {
@@ -1370,6 +1377,18 @@ input {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 768px) {
+  .social__list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
 .social__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1380,6 +1399,11 @@ input {
 }
 .social__item:not(:last-child) {
   margin-right: 40px;
+}
+@media (max-width: 768px) {
+  .social__item {
+    margin-bottom: 20px;
+  }
 }
 .social__icon {
   margin-right: 10px;
@@ -1687,6 +1711,7 @@ input {
 .blog__media {
   width: 690px;
   height: 420px;
+  margin-right: 20px;
 }
 .blog__video {
   width: 100%;
@@ -1706,6 +1731,9 @@ input {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 140px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 17%;
+  flex: 1 1 17%;
 }
 .blog__slide-head {
   font-weight: 700;
@@ -2085,14 +2113,14 @@ input {
     justify-content: flex-start;
   }
   .whoweare__text,
-  .misiunea__item {
+.misiunea__item {
     min-width: auto;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 28.8%;
     flex: 1 1 28.8%;
   }
   .whoweare__text:not(:last-child),
-  .misiunea__item:not(:last-child) {
+.misiunea__item:not(:last-child) {
     margin-bottom: 40px;
   }
   .blog__media {
@@ -2110,9 +2138,9 @@ input {
     height: 69px;
   }
   .footer__data,
-  .footer__data:nth-child(2),
-  .footer__data:nth-child(3),
-  .footer__data:last-child {
+.footer__data:nth-child(2),
+.footer__data:nth-child(3),
+.footer__data:last-child {
     text-align: left;
   }
   .footer__data:nth-child(2) {
@@ -2180,6 +2208,9 @@ input {
   .heading {
     font-size: 72px;
   }
+  .header__container {
+    padding-right: 70px;
+  }
   .misiunea__item {
     max-width: 50%;
   }
@@ -2230,9 +2261,14 @@ input {
     left: 0;
     width: 100%;
     z-index: 7;
-    background: -webkit-gradient(linear, left top, left bottom, from(#002535), to(transparent)) #003851;
-    background: -o-linear-gradient(top, #002535 0%, transparent 100%) #003851;
-    background: linear-gradient(180deg, #002535 0%, transparent 100%) #003851;
+    background: rgba(34, 100, 110, 0.8);
+    padding: 15px 0;
+  }
+  .header__container {
+    padding-right: 50px;
+  }
+  .header__logo {
+    font-size: 18px;
   }
   .hero__slide {
     -webkit-box-orient: vertical;
@@ -2250,6 +2286,9 @@ input {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+  .hero__slide-head span:nth-child(even) {
+    margin-left: 0;
   }
   .whoweare__container {
     padding-bottom: 10%;
@@ -2301,6 +2340,95 @@ input {
   .services__nav {
     width: 181px;
     height: 69px;
+  }
+}
+@media (max-width: 576px) {
+  .heading {
+    font-size: 56px;
+  }
+  .hero__container,
+.hero__clip {
+    height: 700px;
+  }
+  .whoweare__container {
+    padding-top: 12.6%;
+    padding-bottom: 28%;
+  }
+  .whoweare__head {
+    margin-bottom: 21%;
+  }
+  .misiunea__container {
+    padding-top: 20%;
+  }
+  .misiunea__head {
+    margin-bottom: 22%;
+  }
+  .misiunea__item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 48%;
+    flex: 1 1 48%;
+    max-width: none;
+    width: 100%;
+  }
+  .misiunea__item:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  .misiunea__item p {
+    font-size: 36px;
+  }
+  .blog__container {
+    padding-top: 20.3%;
+  }
+  .blog__slider {
+    height: 396px;
+  }
+  .blog__slide,
+.blog__info {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .blog__slide-head {
+    font-size: 36px;
+  }
+  .blog__head {
+    margin-bottom: 22.5%;
+  }
+  .blog__navigation {
+    bottom: 64px;
+  }
+  .services__container {
+    padding-top: 12%;
+  }
+  .services__head {
+    margin-bottom: 82px;
+  }
+  .services__title {
+    font-size: 48px;
+    width: 90%;
+  }
+  .services__navigation {
+    margin-bottom: 15px;
+  }
+  .services__image {
+    padding-bottom: 156.2%;
+  }
+  .footer__data {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+  .footer__data:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .heading {
+    font-size: 50px;
+    letter-spacing: -2px;
+  }
+  .blog__slide-head {
+    font-size: 36px;
   }
 }
 /*# sourceMappingURL=style.css.map */
