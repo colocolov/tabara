@@ -1,19 +1,56 @@
 @media ( max-width:992px )
   .header__menu
-    position: fixed
+    // position: fixed
     // background: $gradient-dark
     // opacity: 0.9
     // box-shadow: 0 1px 35px 0 rgb($black / 8%)
-    z-index: 100
-    width: 100%
-    right: 0
-    left: 0
+    // z-index: 100
+    // width: 100%
+    // right: 0
+    // left: 0
     // top: 44px
   .menu__icon
-    margin-left: auto
-    margin-right: 130px
+    // margin-left: auto
+    // margin-right: 130px
   .menu__body
-    display: flex
-    flex-direction: column
+    // display: flex
+    // flex-direction: column
+    // height: 100%
+
+
+  [class*=__container]
+    padding-right: 20px
+    padding-left: 20px
+
+  .heading
+    font-size: 72px
+
+  .misiunea__item
+    max-width: 50%
+    &:not(:last-child)
+      margin-bottom: 50px
+
+  .blog__slide-head
+    font-size: 52px
+  .blog__media
+    margin-right: 30px
+
+  .services__slider
+    width: 64.5%
+  .services__info
+    width: 32.8%
+    height: auto
+    justify-content: flex-end
+  .services__btn
+    margin-top: 30px
+  .services__slider-wrap
     height: 100%
+
+  .footer__data
+    flex: 1 1 48%
+    &:not(:last-child)
+      margin-bottom: 0
+    &:nth-child(2)
+      margin-bottom: 50px
+
 

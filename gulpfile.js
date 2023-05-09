@@ -187,7 +187,7 @@ function cssAdd() {
 
 function js() {
   return src([
-    // "node_modules/swiper/swiper-bundle.js",
+    "node_modules/swiper/swiper-bundle.js",
     path.src.js
     ])
     .pipe(
@@ -208,7 +208,7 @@ function js() {
 // build version JS
 function jsBuild() {
   return src([
-    // "node_modules/swiper/swiper-bundle.js",
+    "node_modules/swiper/swiper-bundle.js",
       path.src.js
     ])
     .pipe(concat("main.js"))
