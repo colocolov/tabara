@@ -33,6 +33,7 @@
         // z-index: 3
       // top: -27px
     @media (max-width: 768px)
+      transition: right .3s ease-out 0s
       padding: 100px 15% 50px
     @media (max-width: 576px)
       min-height: 700px
@@ -126,10 +127,12 @@
         bottom: 0
         right: 0
         left: auto
+      @media (max-width: 768px)
+        transition: all .4s cubic-bezier(0.76, -0.76, 0.25, 1.26)
     &._active
       // transition-delay: 1s
       // animation: menuSpan 1s ease 0.3s forwards
-      transition: position 0.5s ease-out 2s
+      transition: position 0.5s ease-out 1s
       span
         // transition: all 0.4s cubic-bezier(0.76, -2.76, 2.25, 1.26)
         //transform: scale(0)

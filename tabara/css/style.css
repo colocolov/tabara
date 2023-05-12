@@ -1257,6 +1257,9 @@ input {
 }
 @media (max-width: 768px) {
   .menu__body {
+    -webkit-transition: right 0.3s ease-out 0s;
+    -o-transition: right 0.3s ease-out 0s;
+    transition: right 0.3s ease-out 0s;
     padding: 100px 15% 50px;
   }
 }
@@ -1353,10 +1356,17 @@ input {
   right: 0;
   left: auto;
 }
+@media (max-width: 768px) {
+  .menu__icon span {
+    -webkit-transition: all 0.4s cubic-bezier(0.76, -0.76, 0.25, 1.26);
+    -o-transition: all 0.4s cubic-bezier(0.76, -0.76, 0.25, 1.26);
+    transition: all 0.4s cubic-bezier(0.76, -0.76, 0.25, 1.26);
+  }
+}
 .menu__icon._active {
-  -webkit-transition: position 0.5s ease-out 2s;
-  -o-transition: position 0.5s ease-out 2s;
-  transition: position 0.5s ease-out 2s;
+  -webkit-transition: position 0.5s ease-out 1s;
+  -o-transition: position 0.5s ease-out 1s;
+  transition: position 0.5s ease-out 1s;
 }
 .menu__icon._active span:first-child {
   top: calc(50% - 3px);
