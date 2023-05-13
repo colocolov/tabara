@@ -1295,7 +1295,7 @@ input {
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
-  letter-spacing: -5px;
+  letter-spacing: -1px;
 }
 .menu__item:not(:last-child) {
   margin-bottom: 39px;
@@ -1319,7 +1319,6 @@ input {
   .menu__item {
     margin-bottom: 40px;
     font-size: 32px;
-    letter-spacing: -1px;
   }
 }
 .menu__icon {
@@ -1427,9 +1426,6 @@ input {
 
 .hero {
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .hero::before {
   content: "";
@@ -1500,7 +1496,7 @@ input {
   left: 0;
   height: 800px;
   width: 100%;
-  background: url("../images/bg/hero.jpg");
+  background: url("../images/bg/hero.jpg") no-repeat center/cover;
 }
 .hero__video {
   width: 100%;
