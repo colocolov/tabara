@@ -1,0 +1,43 @@
+.btn-reset
+  padding: 0
+  border: none
+  background-color: transparent
+  cursor: pointer
+  outline: none
+
+.btn
+  //align-self: center // если кнпка находится во flex-контейнере и нужно выровнять ее по середине
+  display: inline-block
+  background: $green
+  border-radius: 30px
+  padding: 15px 25px
+  color: $black !important
+  @include font(700, 20, 24)
+  text-align: center
+  text-transform: uppercase
+  transition: all 0.3s linear
+
+  &__home
+
+  &__tabara
+
+
+// стрелки слайдера
+.navigation
+  &__btn
+    width: 250px
+    height: 114px
+    cursor: pointer
+    &-prev
+      // transform: rotate(90deg)
+    &-fill
+      width: 100%
+      height: 100%
+      // transition: all 0.7s cubic-bezier(0.76, -0.76, 0.25, 1.26)
+      svg
+        // width: 250px
+        // height: 114px
+    &-next
+      // position: relative
+
+      // transform: rotate(-90deg)
