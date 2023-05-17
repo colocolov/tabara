@@ -1056,8 +1056,8 @@ a:hover {
 }
 :root {
   --widthScrollBar: 17px;
-  --quantityHeroSlider: 4;
-  --containerPadding: 100px;
+  --quantityHeroSlider: 10;
+  --containerPadding: 15px;
 }
 
 body {
@@ -1080,7 +1080,6 @@ html {
 }
 
 body {
-  background: #22646E;
   color: #FFFFFF;
 }
 body._lock {
@@ -1136,7 +1135,7 @@ input {
 }
 
 [class*=__container] {
-  max-width: 1440px;
+  max-width: 1270px;
   margin: 0 auto;
   padding: 0 var(--containerPadding);
 }
@@ -1208,7 +1207,6 @@ input {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-right: 120px;
 }
 .header__logo {
   width: 94px;
@@ -1422,6 +1420,13 @@ input {
 .social__icon svg {
   height: 100%;
   width: 100%;
+}
+
+.body-home {
+  background: #22646E;
+}
+.body-home .header__container {
+  padding-right: 120px;
 }
 
 .hero {
@@ -1833,6 +1838,9 @@ input {
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
+.services__info p {
+  margin-bottom: 30px;
+}
 .services__slider {
   width: 610px;
   margin-left: 0;
@@ -1933,6 +1941,114 @@ input {
   width: 100%;
   height: 100%;
 }
+.body-tabara {
+  background: #3B89AC;
+}
+.body-tabara .header__container-tabara {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.body-tabara .header__logo-tabara {
+  width: 230px;
+  height: 100px;
+}
+.body-tabara .header__menu-tabara {
+  margin-top: 15px;
+}
+
+.tab-hero__container {
+  position: relative;
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.tab-hero__container::before {
+  content: "";
+  position: absolute;
+  background: url("../images/bg/heart.png") center/cover no-repeat;
+  top: 17%;
+  left: 21%;
+  width: 584px;
+  height: 584px;
+  z-index: -1;
+}
+.tab-hero__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.tab-hero__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.tab-hero__data {
+  font-size: 24px;
+  line-height: 185%;
+  margin-right: 36px;
+}
+.tab-hero__info {
+  background-color: #A7FF4F;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.tab-hero__title {
+  max-width: 500px;
+}
+.tab-hero__head {
+  font-size: 50px;
+  line-height: 252%;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+.tab-hero__star {
+  position: relative;
+  margin: 0 54px;
+  color: #AB3E22;
+}
+.tab-hero__star::after {
+  content: "";
+  position: absolute;
+  background: url("../images/icons/sprite.svg#star-orange") center/cover no-repeat;
+  top: -37px;
+  left: -42px;
+  width: 151px;
+  height: 151px;
+  z-index: -1;
+}
+.tab-hero__oval {
+  padding: 0 20px;
+  color: #000000;
+  background-color: #A7FF4F;
+  border-radius: 40px;
+  margin-right: 10px;
+}
+
 .footer {
   background-color: #003851;
   color: #FFFFFF;
@@ -2042,12 +2158,6 @@ input {
   }
 }
 @media (max-width: 1280px) {
-  [class*=__container] {
-    padding-right: 80px;
-  }
-  .header__container {
-    padding-right: 130px;
-  }
   .whoweare__container {
     padding-top: 14.6%;
     padding-bottom: 7%;
@@ -2351,6 +2461,9 @@ input {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   .blog__slider-wrap {
     height: 100%;
@@ -2361,6 +2474,9 @@ input {
     height: 58%;
   }
   .blog__info {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     margin-top: 30px;
   }
   .blog__navigation {
@@ -2425,12 +2541,6 @@ input {
   }
   .blog__slider {
     height: 396px;
-  }
-  .blog__slide,
-  .blog__info {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
   }
   .blog__slide-head {
     font-size: 36px;

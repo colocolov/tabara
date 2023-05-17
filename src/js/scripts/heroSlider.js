@@ -44,8 +44,11 @@ const heroSlider = new Swiper(".hero__slider", {
 });
 //----- END
 
-// количество слайдов на главной
-let heightScrollDefault = getComputedStyle(document.documentElement).getPropertyValue('--quantityHeroSlider');
-const quantitySliders = document.querySelector('.hero__pagination').children.length;
-//задаем значание
-document.documentElement.style.setProperty('--quantityHeroSlider', quantitySliders );
+const getSlidersHome = document.querySelector('.hero__pagination');
+if (getSlidersHome) {
+  //let heightScrollDefault = getComputedStyle(document.documentElement).getPropertyValue('--quantityHeroSlider');
+  //console.log(heightScrollDefault);
+  const quantitySliders = getSlidersHome.children.length;
+  //задаем значание
+  document.documentElement.style.setProperty('--quantityHeroSlider', quantitySliders );
+}

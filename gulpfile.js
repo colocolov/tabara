@@ -1,7 +1,7 @@
 const { notifyBrowser } = require("browser-sync");
 
 let projectFolder = require("path").basename(__dirname);
-let sourceFolder = "#src";
+let sourceFolder = "src";
 
 let path = {
   build: {
@@ -121,12 +121,12 @@ function css() {
       })
     )
     .pipe(sourcemaps.init())
-    .pipe(replace(/@img\//g, "../images/"))
     .pipe(
       scss({
         outputStyle: "expanded",
       })
-    )
+      )
+    .pipe(replace(/@img\//g, "../images/"))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],
@@ -235,14 +235,10 @@ function jsAdd() {
 function images() {
   return src(path.src.images)
     .pipe(newer(path.build.images))
-    .pipe(
-      webp({
-        quality: 75,
-      })
-    )
-    .pipe(dest(path.build.images))
-    .pipe(src(path.src.images))
-    .pipe(newer(path.build.images))
+    // .pipe(webp({ quality: 75, }))
+    // .pipe(dest(path.build.images))
+    // .pipe(src(path.src.images))
+    // .pipe(newer(path.build.images))
     .pipe(
       imagemin({
         progressive: true,
