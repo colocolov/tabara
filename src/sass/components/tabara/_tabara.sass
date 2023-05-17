@@ -9,3 +9,27 @@
     height: 100px
   .header__menu-tabara
     margin-top: 15px
+
+.tab__img
+  border: 2px solid $white
+  &::before
+    content: ''
+    position: absolute
+    top: -6px
+    background: url("../images/icons/sprite.svg#cube") center no-repeat
+    z-index: 3
+    left: -6px
+    //transform: translate(-50%, -50%)
+    width: 10px
+    height: 10px
+  &::after
+    content: ''
+    position: absolute
+    top: -6px
+    background: url("../images/icons/sprite.svg#cube") center no-repeat
+    z-index: 3
+    right: -6px
+    //transform: translate(-50%, -50%)
+    width: 10px
+    height: 10px
+

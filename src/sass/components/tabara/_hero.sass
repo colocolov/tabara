@@ -13,6 +13,14 @@
       width: 584px
       height: 584px
       z-index: -1
+    &::after
+      content: ''
+      position: absolute
+      background: url("../images/icons/sprite.svg#fiure") center / cover no-repeat
+      top: 60px
+      right: 0
+      width: 651px
+      height: 725px
   &__date
 
   &__list
@@ -51,7 +59,7 @@
   &__star
     position: relative
     margin: 0 54px
-    color: #AB3E22
+    color: $red-tab
     &::after
       content: ''
       position: absolute

@@ -1425,8 +1425,10 @@ input {
 .body-home {
   background: #22646E;
 }
-.body-home .header__container {
-  padding-right: 120px;
+@media (min-width: 992px) {
+  .body-home .header__container {
+    padding-right: 120px;
+  }
 }
 
 .hero {
@@ -1501,6 +1503,8 @@ input {
   left: 0;
   height: 800px;
   width: 100%;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
   background: url("../images/bg/hero.jpg") no-repeat center/cover;
 }
 .hero__video {
@@ -1957,6 +1961,30 @@ input {
   margin-top: 15px;
 }
 
+.tab__img {
+  border: 2px solid #FFFFFF;
+}
+.tab__img::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  background: url("../images/icons/sprite.svg#cube") center no-repeat;
+  z-index: 3;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+}
+.tab__img::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  background: url("../images/icons/sprite.svg#cube") center no-repeat;
+  z-index: 3;
+  right: -6px;
+  width: 10px;
+  height: 10px;
+}
+
 .tab-hero__container {
   position: relative;
   height: 800px;
@@ -1979,6 +2007,15 @@ input {
   width: 584px;
   height: 584px;
   z-index: -1;
+}
+.tab-hero__container::after {
+  content: "";
+  position: absolute;
+  background: url("../images/icons/sprite.svg#fiure") center/cover no-repeat;
+  top: 60px;
+  right: 0;
+  width: 651px;
+  height: 725px;
 }
 .tab-hero__item {
   display: -webkit-box;
@@ -2049,6 +2086,93 @@ input {
   margin-right: 10px;
 }
 
+.tab-echipa {
+  padding-top: 164px;
+  padding-bottom: 146px;
+}
+.tab-echipa__title {
+  margin-bottom: 164px;
+}
+.tab-echipa__head {
+  max-width: 396px;
+  font-size: 50px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+}
+.tab-echipa__year {
+  line-height: 1.85;
+}
+.tab-echipa__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 3px 0;
+}
+.tab-echipa__info {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 23.9%;
+  flex: 0 1 23.9%;
+  min-width: 295px;
+}
+.tab-echipa__name {
+  font-family: "Spectral";
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-right: 78px;
+}
+.tab-echipa__position {
+  font-family: "Spectral";
+  margin-right: 78px;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  color: #AB3E22;
+}
+.tab-echipa__text {
+  line-height: 1.85;
+}
+.tab-echipa__text p:last-child {
+  margin-bottom: 15px;
+}
+.tab-echipa__img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 23.9%;
+  flex: 0 1 23.9%;
+  min-width: 295px;
+  padding-bottom: 23.9%;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+.tab-echipa__navigation {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 23.9%;
+  flex: 0 1 23.9%;
+  z-index: 2;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.tab-echipa__btn {
+  width: 250px;
+  cursor: pointer;
+}
 .footer {
   background-color: #003851;
   color: #FFFFFF;
@@ -2229,14 +2353,14 @@ input {
     justify-content: flex-start;
   }
   .whoweare__text,
-  .misiunea__item {
+.misiunea__item {
     min-width: auto;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 28.8%;
     flex: 1 1 28.8%;
   }
   .whoweare__text:not(:last-child),
-  .misiunea__item:not(:last-child) {
+.misiunea__item:not(:last-child) {
     margin-bottom: 40px;
   }
   .blog__media {
@@ -2254,9 +2378,9 @@ input {
     height: 69px;
   }
   .footer__data,
-  .footer__data:nth-child(2),
-  .footer__data:nth-child(3),
-  .footer__data:last-child {
+.footer__data:nth-child(2),
+.footer__data:nth-child(3),
+.footer__data:last-child {
     text-align: left;
   }
   .footer__data:nth-child(2) {
@@ -2507,7 +2631,7 @@ input {
     font-size: 50px;
   }
   .hero__container,
-  .hero__clip {
+.hero__clip {
     height: 700px;
   }
   .whoweare__container {
