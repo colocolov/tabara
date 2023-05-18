@@ -8,8 +8,8 @@ let echipalSlider = new Swiper(".tab-echipa__slider", {
   speed: 800,
 
   navigation: {
-    nextEl: ".tab-echipa__btn-next",
-    prevEl: ".tab-echipa__btn-prev",
+    nextEl: ".tab-echipa-next",
+    prevEl: ".tab-echipa-prev",
     // prevEl: ".material__btn-prev",
     // disabledClass: "stories-button__unactive",
     // clickable: true,

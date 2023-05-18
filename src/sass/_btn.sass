@@ -18,19 +18,28 @@
   transition: all 0.3s linear
 
   &__home
+    &-slide
+      margin-right: 20px
+      @include font(700, 30, 30)
+    &-whoweare
+    &-misiunea
+    &-blog
+    &-services
 
   &__tabara
 
 
 // стрелки слайдера
 .navigation
+  display: flex
+  align-items: center
   &__btn
     width: 250px
     height: 114px
     cursor: pointer
     &-prev
       // transform: rotate(90deg)
-    &-fill
+    &-svg
       width: 100%
       height: 100%
       // transition: all 0.7s cubic-bezier(0.76, -0.76, 0.25, 1.26)

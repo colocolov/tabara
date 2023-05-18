@@ -8,8 +8,8 @@ let blogulSlider = new Swiper(".blog__slider", {
   speed: 800,
 
   navigation: {
-    nextEl: ".navigation__btn-next",
-    prevEl: ".navigation__btn-prev",
+    nextEl: ".blog-next",
+    prevEl: ".blog-prev",
     // prevEl: ".material__btn-prev",
     // disabledClass: "stories-button__unactive",
     // clickable: true,

@@ -8,8 +8,8 @@ let servicesSlider = new Swiper(".services__slider", {
   speed: 800,
 
   navigation: {
-    nextEl: ".services__nav-next",
-    prevEl: ".services__nav-prev",
+    nextEl: ".services-next",
+    prevEl: ".services-prev",
     // prevEl: ".material__btn-prev",
     // disabledClass: "stories-button__unactive",
     clickable: true,
