@@ -10,26 +10,40 @@
   .header__menu-tabara
     margin-top: 15px
 
+  @media ( max-width:1280px  )
+    [class*='__container']
+      max-width: 1110px
+  @media ( max-width:1024px  )
+    [class*='__container']
+      max-width: 954px
+
 .tab__img
   border: 2px solid $white
-  &::before
-    content: ''
-    position: absolute
-    top: -6px
-    background: url("../images/icons/sprite.svg#cube") center no-repeat
-    z-index: 3
-    left: -6px
-    //transform: translate(-50%, -50%)
-    width: 10px
-    height: 10px
+  &::before,
   &::after
     content: ''
     position: absolute
     top: -6px
     background: url("../images/icons/sprite.svg#cube") center no-repeat
     z-index: 3
-    right: -6px
-    //transform: translate(-50%, -50%)
     width: 10px
     height: 10px
+  &::before
+    left: -6px
+  &::after
+    right: -6px
+  &-dots
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      bottom: -6px
+      background: url("../images/icons/sprite.svg#cube") center no-repeat
+      z-index: 3
+      width: 10px
+      height: 10px
+    &::before
+      left: -6px
+    &::after
+      right: -6px
 
