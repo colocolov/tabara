@@ -11,7 +11,7 @@
   background: $green
   border-radius: 30px
   padding: 15px 25px
-  color: $black !important
+  color: $black
   @include font(700, 20, 24)
   text-align: center
   text-transform: uppercase
@@ -27,6 +27,32 @@
     &-services
 
   &__tabara
+    &-register
+      background-color: $red-tab
+      color: $white
+      font-size: 30px
+      margin-top: 114px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: -29px
+        left: -44px
+        width: 62px
+        height: 62px
+        background: url("../images/icons/sprite.svg#plus-green") center / cover no-repeat
+        z-index: -1
+      &::after
+        content: ''
+        position: absolute
+        top: -29px
+        left: -93px
+        width: 134px
+        height: 134px
+        background: url("../images/icons/sprite.svg#plus-green") center / cover no-repeat
+        transform: rotate(57deg)
+        z-index: -2
+        filter: blur(7.5px)
 
 
 // стрелки слайдера
