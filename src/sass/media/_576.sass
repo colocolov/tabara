@@ -3,6 +3,7 @@
   .heading
     font-size: 50px // старое 56
 
+  // HOME
   .menu__body
     padding: 100px 30px 30px
 
@@ -56,3 +57,41 @@
     flex: 1 1 100%
     &:not(:last-child)
       margin-bottom: 40px
+
+  // TABARA
+  .tab-hero__container::before
+    top: 1%
+    left: -56%
+  .tab-hero__container::after
+    right: 0
+    width: 150%
+  .tab-hero__date
+    width: 100%
+  .tab-hero__head
+    font-size: 32px
+    line-height: 230%
+  .tab-hero__star::after
+    width: 98px
+    height: 98px
+    top: -27px
+    left: -28px
+  .tab-hero__item:not(:last-child)
+    margin-bottom: 20px
+  .tab-hero__title
+    margin-bottom: 137px
+  .tab-hero__data
+    @include font(700, 20, 37)
+
+  .tab-echipa
+    padding-top: 122px
+  .tab-echipa__info
+    flex: 1 1 100%
+    max-width: 75%
+    margin-bottom: 50px
+  .tab-echipa__img
+    flex: 1 1 100%
+    padding-bottom: 75%
+    max-width: 75%
+  .tab-echipa__navigation
+    justify-content: flex-start
+    margin-top: 20px

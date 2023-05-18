@@ -16,7 +16,29 @@
   @media ( max-width:1024px  )
     [class*='__container']
       max-width: 954px
+  @media (max-width: 768px)
+    .header
+      &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-right: 20px
+        padding-top: 25px
+      &__logo
+        text-align: center
+        width: 105px
+        height: 46px
+        margin-bottom: 20px
+    .menu__icon._active
+      position: absolute
+      top: 30px
+      right: 40px
+      transition: position 0.3s ease
+      span
+        transition-delay: 0.5s
 
+
+// рамка вокруг фото с оранжевыми квадратами по краям
 .tab__img
   border: 2px solid $white
   &::before,
