@@ -32,3 +32,13 @@
   display: none
   opacity: 0
   visibility: hidden
+
+@mixin tabs
+  .tabs__nav-btn--active
+    background-color: #ff0001
+  .tabs__panel
+    display: none
+  &--active
+    display: block
+
+
