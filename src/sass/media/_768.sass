@@ -9,7 +9,23 @@
   /// по новой
   .header
     background: none
+    &__container
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-right: 20px
+      padding-top: 25px
+    &__logo
+      text-align: center
+      margin-bottom: 20px
 
+  .menu__icon._active
+    position: absolute
+    top: 30px
+    right: 40px
+    transition: position 0.3s ease
+    span
+      transition-delay: 0.5s
   .menu__body
     opacity: .98
   .menu__item:not(:last-child)

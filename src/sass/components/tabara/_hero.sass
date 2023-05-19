@@ -7,7 +7,7 @@
     &::before
       content: ''
       position: absolute
-      background: url("../images/bg/heart.png") center / cover no-repeat
+      background: var(--bgImgHeart) center / cover no-repeat
       top: 17%
       left: 21%
       width: 584px
@@ -56,24 +56,3 @@
     line-height: 252%
     letter-spacing: -2px
     text-transform: uppercase
-
-  &__star
-    position: relative
-    margin: 0 54px
-    color: $red-tab
-    &::after
-      content: ''
-      position: absolute
-      background: url("../images/icons/sprite.svg#star-orange") center / cover no-repeat
-      top: -37px
-      left: -42px
-      width: 151px
-      height: 151px
-      z-index: -1
-
-  &__oval
-    padding: 0 20px
-    color: $black
-    background-color: $green
-    border-radius: 40px
-    margin-right: 10px

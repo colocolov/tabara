@@ -1,0 +1,60 @@
+.tab-tema
+  padding-top: 36px
+  padding-bottom: 122px
+  &__container
+    display: flex
+    flex-direction: column
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background: var(--bgImgHeart) center / cover no-repeat
+      top: 23%
+      left: 1%
+      width: 584px
+      height: 584px
+      z-index: -1
+  &__title
+    margin-bottom: 196px
+    display: flex
+
+  &__heading
+
+  &__subtitle
+    line-height: 1.125
+
+  &__head
+    max-width: 300px
+    margin-right: 15px
+
+  &__tema
+    max-width: 542px
+    // line-height: 1.125
+    padding-top: 12px
+    span
+      color: $red-tab
+
+  &__formular
+    flex: 1 0 50%
+    align-self: flex-end
+    width: 49%
+    color: $red-tab
+
+  &__headform
+    letter-spacing: normal !important
+    margin-bottom: 20px
+
+  &__text
+    font-size: 24px
+    line-height: 1.16
+    margin-bottom: 100px
+    p
+      & .tabara-star::after
+        width: 90px
+        height: 90px
+        top: -29px
+        left: -23px
+      &:not(:last-child)
+        margin-bottom: 30px
+
+
