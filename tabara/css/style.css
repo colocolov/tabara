@@ -2703,6 +2703,100 @@ input {
   height: 60px;
 }
 
+.tab-lucruri {
+  padding-top: 160px;
+  padding-bottom: 85px;
+}
+.tab-lucruri__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.tab-lucruri__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 135px;
+}
+.tab-lucruri__head {
+  max-width: 295px;
+  margin-right: 20px;
+}
+.tab-lucruri__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+  min-width: 630px;
+  max-height: 500px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: -10px 0;
+  position: relative;
+}
+.tab-lucruri__list::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 295px;
+  height: 295px;
+  background: url("../images/icons/sprite.svg#star-red") center/cover no-repeat;
+}
+.tab-lucruri__text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 33%;
+  flex: 1 1 33%;
+  max-width: 295px;
+  min-height: 144px;
+  padding: 12px 23px;
+  border-radius: 10px;
+}
+.tab-lucruri__item {
+  padding: 10px;
+  color: #000000;
+}
+.tab-lucruri__item:nth-child(1) div {
+  background-color: #AB3E22;
+}
+.tab-lucruri__item:nth-child(2) div {
+  background-color: #A7FF4F;
+}
+.tab-lucruri__item:nth-child(3) div {
+  background-color: #F0BC05;
+}
+.tab-lucruri__item:nth-child(4) div {
+  background-color: #F0BC05;
+}
+.tab-lucruri__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.tab-lucruri__more a {
+  color: #000000;
+}
+.tab-lucruri__title {
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
 .footer {
   background-color: #003851;
   color: #FFFFFF;
