@@ -6,11 +6,11 @@
     &::before
       content: ''
       position: absolute
-      top: 0
-      right: 0
+      top: -63px
+      right: 270px
       width: 245px
       height: 245px
-      background: url("../images/icons/sprite.svg#triangle-orange") center / contain no-repeat
+      background: url("../images/icons/sprite.svg#triangle-orange") center / cover no-repeat
 
   &__head
     max-width: 350px
@@ -51,6 +51,15 @@
             // background-color: $white
             transition: transform .3s ease
             transform: rotate(-45deg)
+        & .figure
+          &-grass::after
+            background: $green
+          &-green::after
+            background: $green-tab
+          &-red::after
+            background: $red-tab
+          &-orange::after
+            background: $orange-tab
 
 
     &__nav-figure
@@ -79,6 +88,8 @@
       column-gap: 20px
 
     &__panel
+      min-height: 238px
+      line-height: 1.125
       &:first-child
         padding-left: 20px
       &:nth-child(2)
@@ -91,20 +102,16 @@
         margin-bottom: 74px
   .figure
     &-grass
-      &::before,
-      &::after
+      &::before
         background: $green
     &-green
-      &::before,
-      &::after
+      &::before
         background: $green-tab
     &-red
-      &::before,
-      &::after
+      &::before
         background: $red-tab
     &-orange
-      &::before,
-      &::after
+      &::before
         background: $orange-tab
 
 

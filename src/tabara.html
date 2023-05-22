@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ro">
-  @include('html/head.html', { "title":"Tabara Vatici" })
-  <body class="body-tabara">
-    <div class="wrapper">
-      @include('html/tabara/header.html')
-      <main class="main">
-        @include('html/tabara/hero.html')
-        @include('html/tabara/echipa.html')
-        @include('html/tabara/tabara.html')
-        @include('html/tabara/tema.html')
-        @include('html/tabara/program.html')
-      </main>
-      @include('html/footer.html')
-    </div>
-  </body>
+@include('html/head.html', { "title":"Tabara Vatici" })
+
+<body class="body-tabara">
+  <div class="wrapper">
+    @include('html/tabara/header.html')
+    <main class="main">
+      @include('html/tabara/hero.html')
+      @include('html/tabara/echipa.html')
+      @include('html/tabara/tabara.html')
+      @include('html/tabara/tema.html')
+      @include('html/tabara/program.html')
+      @include('html/tabara/conditii.html')
+    </main>
+    @include('html/footer.html')
+  </div>
+</body>
+
 </html>
