@@ -1,0 +1,112 @@
+.tab-program
+  padding: 164px 0 56px
+
+  &__container
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 245px
+      height: 245px
+      background: url("../images/icons/sprite.svg#triangle-orange") center / contain no-repeat
+
+  &__head
+    max-width: 350px
+    margin-bottom: 196px
+
+  &__tabs
+
+
+  .tabs
+    &__nav
+      margin-bottom: 67px
+
+    &__nav-item
+      flex: 1 0 25%
+
+
+    &__nav-btn
+      // position: relative
+      background: transparent
+      cursor: pointer
+      &--active
+        & .tabs__nav-figure
+          position: relative
+          background: transparent
+          &::before
+            position: absolute
+            border-radius: 0
+            top: calc( 50% - 11px )
+            left: 0
+            height: 23px
+            // background-color: $white
+            transition: transform .3s ease
+            transform: rotate(45deg)
+          &::after
+            top: calc( 50% - 11px )
+            left: 0
+            height: 23px
+            // background-color: $white
+            transition: transform .3s ease
+            transform: rotate(-45deg)
+
+
+    &__nav-figure
+      width: 100px
+      height: 100px
+      display: flex
+      margin-left: 15px
+      &::before
+        content: ''
+        transition: transform .3s ease
+        // background-color: $red-tab
+        border-radius: 50%
+        width: 100px
+        height: 100px
+      &::after
+        content: ''
+        top: calc( 50% - 11px )
+        position: absolute
+        width: 100px
+        height: 100px
+        transition: transform .3s ease
+
+    &__content
+      display: grid
+      grid-template-columns: repeat(4, 295px)
+      column-gap: 20px
+
+    &__panel
+      &:first-child
+        padding-left: 20px
+      &:nth-child(2)
+        grid-column: 2/3
+      &:nth-child(3)
+        grid-column: 3/4
+      &:nth-child(4)
+        grid-column: 4/5
+      p:not(:last-child)
+        margin-bottom: 74px
+  .figure
+    &-grass
+      &::before,
+      &::after
+        background: $green
+    &-green
+      &::before,
+      &::after
+        background: $green-tab
+    &-red
+      &::before,
+      &::after
+        background: $red-tab
+    &-orange
+      &::before,
+      &::after
+        background: $orange-tab
+
+
+
+
