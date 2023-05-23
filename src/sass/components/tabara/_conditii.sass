@@ -4,6 +4,17 @@
   &__container
     display: flex
     justify-content: space-between
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background: url("../images/icons/sprite.svg#figure-conditii") center / cover no-repeat
+      top: -77px
+      right: 110px
+      width: 935px
+      height: 747px
+      z-index: -1
+
 
   &__info
     display: flex

@@ -1057,7 +1057,6 @@ a:hover {
 :root {
   --widthScrollBar: 17px;
   --quantityHeroSlider: 10;
-  --containerPadding: 15px;
 }
 
 body {
@@ -1137,7 +1136,7 @@ input {
 [class*=__container] {
   max-width: 1270px;
   margin: 0 auto;
-  padding: 0 var(--containerPadding);
+  padding: 0 15px;
 }
 
 ._ibg {
@@ -1449,16 +1448,6 @@ input {
   content: "";
   position: absolute;
   top: -29px;
-  left: -44px;
-  width: 62px;
-  height: 62px;
-  background: url("../images/icons/sprite.svg#plus-green") center/cover no-repeat;
-  z-index: -1;
-}
-.btn__tabara-register::after {
-  content: "";
-  position: absolute;
-  top: -29px;
   left: -93px;
   width: 134px;
   height: 134px;
@@ -1514,12 +1503,8 @@ input {
   display: flex;
   list-style: none;
 }
-.tabs__nav-btn--active {
-  background-color: wheat;
-}
 .tabs__nav-btn:focus {
   color: #fff;
-  background-color: navy;
 }
 
 .body-home {
@@ -2129,6 +2114,14 @@ input {
   margin-right: 10px;
 }
 
+.tabara-transparent {
+  padding: 3px 17px;
+  background: #AB3E22;
+  border-radius: 12px;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
 .tabara-red {
   position: relative;
   z-index: -1;
@@ -2370,6 +2363,18 @@ input {
   height: 245px;
   background: url("../images/icons/sprite.svg#star-orange-big") center/cover no-repeat;
 }
+.tab-tabara__container::after {
+  content: "";
+  position: absolute;
+  bottom: 158px;
+  left: 35px;
+  width: 158px;
+  height: 158px;
+  background: #AB3E22;
+  border-radius: 50%;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+}
 .tab-tabara__title {
   max-width: 400px;
   margin-bottom: 164px;
@@ -2426,6 +2431,18 @@ input {
   height: 584px;
   z-index: -1;
 }
+.tab-tema__container::after {
+  content: "";
+  position: absolute;
+  bottom: -51px;
+  left: 185px;
+  width: 135px;
+  height: 135px;
+  background: url("../images/icons/sprite.svg#circle-green") center/cover no-repeat;
+  z-index: -2;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+}
 .tab-tema__title {
   margin-bottom: 196px;
   display: -webkit-box;
@@ -2455,6 +2472,9 @@ input {
   width: 49%;
   color: #AB3E22;
 }
+.tab-tema__formular a {
+  color: #FFFFFF;
+}
 .tab-tema__headform {
   letter-spacing: normal !important;
   margin-bottom: 20px;
@@ -2476,6 +2496,21 @@ input {
 
 .tab-program {
   padding: 164px 0 56px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.tab-program::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 56, 81, 0.7);
+  z-index: 0;
 }
 .tab-program__container {
   position: relative;
@@ -2488,6 +2523,7 @@ input {
   width: 245px;
   height: 245px;
   background: url("../images/icons/sprite.svg#triangle-orange") center/cover no-repeat;
+  z-index: -1;
 }
 .tab-program__head {
   max-width: 350px;
@@ -2638,6 +2674,17 @@ input {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+}
+.tab-conditii__container::before {
+  content: "";
+  position: absolute;
+  background: url("../images/icons/sprite.svg#figure-conditii") center/cover no-repeat;
+  top: -77px;
+  right: 110px;
+  width: 935px;
+  height: 747px;
+  z-index: -1;
 }
 .tab-conditii__info {
   display: -webkit-box;
@@ -2715,6 +2762,17 @@ input {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  position: relative;
+}
+.tab-lucruri__container::before {
+  content: "";
+  position: absolute;
+  background: url("../images/icons/sprite.svg#figure-lucru") center/cover no-repeat;
+  top: 44px;
+  right: 116px;
+  width: 1088px;
+  height: 508px;
+  z-index: -1;
 }
 .tab-lucruri__info {
   display: -webkit-box;
@@ -2795,6 +2853,89 @@ input {
 .tab-lucruri__title {
   text-transform: uppercase;
   margin-right: 30px;
+}
+
+.tab-sezon {
+  padding-top: 199px;
+  padding-bottom: 84px;
+}
+.tab-sezon__container {
+  position: relative;
+}
+.tab-sezon__container::before {
+  content: "";
+  position: absolute;
+  background: url("../images/icons/sprite.svg#figure-sezon") center/contain no-repeat;
+  top: -134px;
+  right: -32px;
+  width: 1268px;
+  height: 830px;
+  z-index: -2;
+}
+.tab-sezon__container::after {
+  content: "";
+  position: absolute;
+  background: #F0BC05;
+  border-radius: 50%;
+  bottom: -50px;
+  right: 234px;
+  width: 158px;
+  height: 158px;
+  z-index: -1;
+}
+.tab-sezon__head {
+  margin-bottom: 117px;
+}
+.tab-sezon__slider {
+  height: 480px;
+  width: 930px;
+  margin-left: 0;
+}
+.tab-sezon__slider::before {
+  content: "";
+  position: absolute;
+  background: #F0BC05;
+  border-radius: 50%;
+  bottom: 95px;
+  left: 224px;
+  width: 158px;
+  height: 158px;
+  z-index: -2;
+}
+.tab-sezon__slide {
+  position: relative;
+  height: auto;
+  padding: 5px;
+  width: 288px !important;
+  margin-right: 15px;
+}
+.tab-sezon__slide:nth-child(odd) {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+.tab-sezon__img {
+  padding-bottom: 98.5%;
+}
+.tab-sezon__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.tab-sezon__navigation {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 32px;
+  width: 250px;
+  height: 114px;
+  z-index: 5;
 }
 
 .footer {
@@ -3011,14 +3152,14 @@ input {
     justify-content: flex-start;
   }
   .whoweare__text,
-.misiunea__item {
+  .misiunea__item {
     min-width: auto;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 28.8%;
     flex: 1 1 28.8%;
   }
   .whoweare__text:not(:last-child),
-.misiunea__item:not(:last-child) {
+  .misiunea__item:not(:last-child) {
     margin-bottom: 40px;
   }
   .blog__media {
@@ -3036,9 +3177,9 @@ input {
     height: 69px;
   }
   .footer__data,
-.footer__data:nth-child(2),
-.footer__data:nth-child(3),
-.footer__data:last-child {
+  .footer__data:nth-child(2),
+  .footer__data:nth-child(3),
+  .footer__data:last-child {
     text-align: left;
   }
   .footer__data:nth-child(2) {
@@ -3355,7 +3496,7 @@ input {
     padding: 100px 30px 30px;
   }
   .hero__container,
-.hero__clip {
+  .hero__clip {
     height: 700px;
   }
   .whoweare__container {

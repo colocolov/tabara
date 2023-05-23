@@ -16,11 +16,14 @@ $gradient-top: linear-gradient(180deg, #22646E 0%, transparent 100%) #002535
 // анимация
 $cubic: all 0.7s cubic-bezier(0.76, -0.76, 0.25, 1.26)
 
-// ширина скролла по умолчанию
+// переменные по умолчанию
+$containerPadding: 15
+$contentWidth: 1240
+$containerWidth: $contentWidth + $containerPadding * 2
+
 :root
   --widthScrollBar: 17px
   --quantityHeroSlider: 10
-  --containerPadding: 15px
 
 %body
   font-family: 'Helvetica', sans-serif

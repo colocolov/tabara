@@ -1,0 +1,74 @@
+.tab-sezon
+  padding-top: 199px
+  padding-bottom: 84px
+  &__container
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background: url("../images/icons/sprite.svg#figure-sezon") center / contain no-repeat
+      top: -134px
+      right: -32px
+      width: 1268px
+      height: 830px
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      background: $orange-tab
+      border-radius: 50%
+      bottom: -50px
+      right: 234px
+      width: 158px
+      height: 158px
+      z-index: -1
+
+  &__head
+    margin-bottom: 117px
+
+  &__slider
+    height: 480px
+    width: 930px
+    margin-left: 0
+    &::before
+      content: ''
+      position: absolute
+      background: $orange-tab
+      border-radius: 50%
+      bottom: 95px
+      left: 224px
+      width: 158px
+      height: 158px
+      z-index: -2
+
+  &__wrapper
+    // column-gap: 15px
+
+  &__slide
+    position: relative
+    height: auto
+    padding: 5px
+    width: 288px !important
+    margin-right: 15px
+    &:nth-child(odd)
+      align-self: flex-end
+
+  &__img
+    padding-bottom: 98.5%
+
+  &__data
+    @include fl-all
+    padding: 0 5px
+
+  &__name
+
+  &__year
+
+  &__navigation
+    content: ''
+    position: absolute
+    top: 5px
+    right: 32px
+    width: 250px
+    height: 114px
+    z-index: 5

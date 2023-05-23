@@ -14,6 +14,16 @@
       width: 584px
       height: 584px
       z-index: -1
+    &::after
+      content: ''
+      position: absolute
+      bottom: -51px
+      left: 185px
+      width: 135px
+      height: 135px
+      background: url("../images/icons/sprite.svg#circle-green") center / cover no-repeat
+      z-index: -2
+      filter: blur(12px)
   &__title
     margin-bottom: 196px
     display: flex
@@ -39,6 +49,8 @@
     align-self: flex-end
     width: 49%
     color: $red-tab
+    a
+      color: $white
 
   &__headform
     letter-spacing: normal !important

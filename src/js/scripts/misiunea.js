@@ -4,7 +4,7 @@ const misiuneaItems = document.querySelectorAll('.misiunea__item');
 // const misiuneaInstitut = document.querySelector('.misiunea_institut');
 // const misiuneaInvatamint = document.querySelector('.misiunea_invatamint');
 
-misiuneaItems.forEach(item => {
+misiuneaItems.forEach((item) => {
   item.addEventListener("mouseenter", (e) => {
     const urlImg = item.dataset.url;
     //console.log(urlImg);

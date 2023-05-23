@@ -4,6 +4,16 @@
   &__container
     display: flex
     flex-direction: column
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background: url("../images/icons/sprite.svg#figure-lucru") center / cover no-repeat
+      top: 44px
+      right: 116px
+      width: 1088px
+      height: 508px
+      z-index: -1
   &__info
     display: flex
     margin-bottom: 135px

@@ -13,6 +13,11 @@
   // line-height: $height / $size
   line-height: math.div($height, $size)
 
+@mixin font-size($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $containerWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
 @mixin fl-all
   display: flex
   align-items: center

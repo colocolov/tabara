@@ -1,5 +1,19 @@
 .tab-program
   padding: 164px 0 56px
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#003851, 0.7)
+    z-index: 0
 
   &__container
     position: relative
@@ -11,6 +25,7 @@
       width: 245px
       height: 245px
       background: url("../images/icons/sprite.svg#triangle-orange") center / cover no-repeat
+      z-index: -1
 
   &__head
     max-width: 350px
