@@ -22,7 +22,6 @@ class KlsTabs {
     this.check();
     this.init();
     this.events();
-
   }
 
   check() {

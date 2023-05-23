@@ -1,6 +1,10 @@
 .menu
   // display: block
   // max-width: 1440px
+  &__lang
+    margin-bottom: -50px
+    z-index: 2
+    align-self: flex-end
   &__social
     justify-content: flex-end
     position: relative
@@ -11,7 +15,7 @@
     // left: 0
     // right: -200%
     width: 100%
-    height: 800px
+    min-height: 800px
     padding: 125px 85px 50px
     background: $gradient-dark
     // background: url('../images/bg/hero.jpg') no-repeat center
@@ -35,7 +39,7 @@
       // top: -27px
     @media (max-width: 768px)
       transition: right .3s ease-out 0s
-      padding: 100px 15% 50px
+      padding: 100px 5% 50px 15%
     @media (max-width: 576px)
       min-height: 700px
       height: 100vh
@@ -52,7 +56,12 @@
     flex-direction: column
     align-items: flex-start
     // &:not(:last-child)
-    //   margin-bottom: 120px
+    margin-bottom: 30px
+    & > li._active .menu__sub-list
+      opacity: 1
+      visibility: visible
+      // width: auto
+      height: auto
 
   &__item
     position: relative
@@ -66,7 +75,12 @@
     letter-spacing: -1px
     &:not(:last-child)
       margin-bottom: 39px
-    // нижняя линия при наведении
+    @media (max-width: 768px)
+      margin-bottom: 40px
+      font-size: 32px
+  &__link
+    position: relative
+        // нижняя линия при наведении
     &::before
       position: absolute
       content: ''
@@ -79,21 +93,49 @@
     &._active::before
       width: 100%
 
+  &__arrow
+    width: 30px
+    height: 30px
+    margin-left: 50px
+    border: none
+    background: url(../images/icons/sprite.svg#plus-white) center / contain no-repeat
+    // background-size: 14px
+    outline: none
+    cursor: pointer
+    transition: transform 0.5s cubic-bezier(0.76, -0.76, 0.25, 1.26)
+    color: $black
+    &._active
+      transform: rotate(45deg)
+
     // &:last-child a
     //   transition: 0.3s linear
     //   margin-left: 120px
     // субменю
     // @media (any-hover: hover)
     //   &:hover
-    //     .menu__sub-list
-    //       visibility: visible
-    //       pointer-events: auto
-    //       opacity: 1
-    //       transform: translate(0px, 0px)
-    //     .menu__arrow
-    //       transform: rotate(-180deg)
-    //     .menu__arrow
-    //       color: $black
+
+  &__submenu
+    display: flex
+    align-items: center
+  &__sub-list
+    pointer-events: auto
+    // transform: translate(0px, 0px)
+
+    display: flex
+    align-items: center
+    transition: all 0.7s ease
+    visibility: hidden
+    opacity: 0
+    // width: 0
+    height: 0
+  &__sub-item
+    padding-left: 50px
+    font-weight: 700
+    font-size: 24px
+    line-height: 0.95
+    color: $white
+    cursor: pointer
+    text-transform: none
     // @media (min-width: 768px)
     //   &._hover
     //     .menu__sub-list
@@ -103,9 +145,6 @@
     //       transform: translate(0px, 0px)
     //     .menu__arrow
     //       transform: rotate(-180deg)
-    @media (max-width: 768px)
-      margin-bottom: 40px
-      font-size: 32px
       //letter-spacing: -1px
 
   &__icon
