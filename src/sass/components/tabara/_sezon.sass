@@ -42,14 +42,17 @@
       z-index: -2
 
   &__wrapper
+    box-sizing: border-box
+    // & a.tab-sezon__slide
+    //   width: 288px
     // column-gap: 15px
 
   &__slide
     position: relative
     height: auto
-    padding: 5px
-    width: 288px !important
-    margin-right: 15px
+    padding: 5px 10px
+    // margin-right: 20px
+    flex-grow: 0
     &:nth-child(odd)
       align-self: flex-end
 
