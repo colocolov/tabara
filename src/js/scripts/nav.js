@@ -32,7 +32,7 @@ if (iconMenu) {
 document.addEventListener("click", documentActions);
 function documentActions(el) {
   const targetElement = el.target;
-  console.log(targetElement);
+  // console.log(targetElement);
   if (targetElement.classList.contains("menu__arrow")) {
     el.preventDefault();
     targetElement.closest(".menu__item").classList.toggle("_active");
