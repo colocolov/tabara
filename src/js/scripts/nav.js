@@ -1,110 +1,49 @@
 // мобильное меню
 
-//выпадающее меню для мобильных устройств
-//document.addEventListener("click", documentActions);
-
-// function documentActions(e) {
-//   const targetElement = e.target;
-//   if (window.innerWidth > 900) {
-//     if (targetElement.classList.contains("menu__arrow")) {
-//       targetElement.closest(".menu__item").classList.toggle("_hover");
-//     }
-//     if (
-//       !targetElement.closest(".menu__item") &&
-//       document.querySelectorAll(".menu__item._hover").length > 0
-//     ) {
-//       // console.log("ehhh");
-//       // _removeClasses(document.querySelectorAll(".menu__item._hover"), "_hover");
-//     }
-//   }
-// }
-
-// проверка, является ли уствройство мобильным
-const isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
-
-// if (isMobile.any()) {
-  // document.querySelector('html').classList.add('_touch');
-  // document.body.classList.add("_touch");
-// }
-
 // меню бургер
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
-const menuSub = document.querySelectorAll(".menu__submenu");
+const menuSub = document.querySelector(".menu__submenu");
+const menuArrow = document.querySelector(".menu__arrow");
 const menuSocial = document.querySelector(".menu__social.social__list");
 
 // ver 1
 if (iconMenu) {
-  iconMenu.addEventListener("click", function (e) {
-    if (menuBody){
-      // if (window.innerWidth < 993) {
-      //   const menuHeader = document.querySelector(".header__menu");
-      //   // console.log(menuHeader);
-      //   menuHeader.classList.toggle("_active");
-      // }
+  iconMenu.addEventListener("click", (e) => {
+    if (menuBody) {
+
+      iconMenu.addEventListener("click", (e) => {
+        if (iconMenu.classList.contains("_active")) {
+          // menuSub.classList.remove("_active");
+        }
+      });
+
       //document.body.classList.toggle("_lock");
       iconMenu.classList.toggle("_active");
       menuBody.classList.toggle("_active");
-      console.log(menuBody);
+      //console.log(menuBody);
     }
-
-    // if (menuSub) {
-    //   const plus = menuSub[0].children[1];
-    //   //console.log(menuSub[0].children[1]);
-    //   menuSub.addEventListener("click", (e) => {
-    //     plus.classList.toggle("_active");
-    //   });
-    // }
-
 
   });
 }
 
+// клик по доп меню
 document.addEventListener("click", documentActions);
-function documentActions(e) {
-  const targetElement = e.target;
+function documentActions(el) {
+  const targetElement = el.target;
   console.log(targetElement);
-  if (window.innerWidth > 900) {
-    if (targetElement.classList.contains("menu__arrow")) {
-      //e.preventDefault();
-      targetElement.closest(".menu__item").classList.toggle("_active");
-      targetElement.classList.toggle("_active");
-    }
-    if (
-      !targetElement.closest(".menu__item") &&
-      document.querySelectorAll(".menu__item._hover").length > 0
-    ) {
-      // console.log("ehhh");
-      // _removeClasses(document.querySelectorAll(".menu__item._hover"), "_hover");
-    }
+  if (targetElement.classList.contains("menu__arrow")) {
+    el.preventDefault();
+    targetElement.closest(".menu__item").classList.toggle("_active");
+    targetElement.classList.toggle("_active");
+  } else {
+    menuSub.classList.remove("_active");
+    menuArrow.classList.remove("_active");
   }
 }
+
+
 
 
 
@@ -112,11 +51,12 @@ function documentActions(e) {
 // закрытие при клике по меню
 if (menuLink.length) {
   menuLink.forEach((item) => {
-
-    // console.log(item);
     item.addEventListener("click", (e) => {
-      // console.log(e.target);
-      //removeActiveClass();
+      if (e.target.classList.contains("menu__arrow")) {
+        // e.preventDefault();
+      } else {
+        removeActiveClass();
+      }
     });
   });
 }
@@ -124,7 +64,6 @@ if (menuLink.length) {
 // закрытие при клике по соцменю
 if (menuSocial) {
   menuSocial.addEventListener('click', (e) => {
-    // console.log(e.target);
     removeActiveClass();
   });
 }
@@ -133,4 +72,7 @@ function removeActiveClass () {
     //document.body.classList.remove("_lock");
   iconMenu.classList.remove("_active");
   menuBody.classList.remove("_active");
+  menuSub.classList.remove("_active");
+  menuArrow.classList.remove("_active");
+  // menuBody.classList.remove("_active");
 }

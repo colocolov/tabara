@@ -1271,8 +1271,7 @@ input {
 }
 @media (max-width: 576px) {
   .menu__body {
-    min-height: 700px;
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 .menu__container {
@@ -1306,6 +1305,9 @@ input {
   opacity: 1;
   visibility: visible;
   height: auto;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .menu__item {
   position: relative;
@@ -1348,6 +1350,8 @@ input {
   width: 100%;
 }
 .menu__arrow {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   margin-left: 50px;
@@ -1362,6 +1366,11 @@ input {
   transition: transform 0.5s cubic-bezier(0.76, -0.76, 0.25, 1.26), -webkit-transform 0.5s cubic-bezier(0.76, -0.76, 0.25, 1.26);
   color: #000000;
 }
+@media (max-width: 480px) {
+  .menu__arrow {
+    margin-left: 20px;
+  }
+}
 .menu__arrow._active {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1375,6 +1384,15 @@ input {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .menu__submenu {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .menu__submenu._active > ul {
+    margin-top: 30px;
+  }
+}
 .menu__sub-list {
   pointer-events: auto;
   display: -webkit-box;
@@ -1383,12 +1401,19 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   visibility: hidden;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   opacity: 0;
   height: 0;
+}
+@media (max-width: 992px) {
+  .menu__sub-list {
+    width: 100%;
+  }
 }
 .menu__sub-item {
   padding-left: 50px;
@@ -1398,6 +1423,8 @@ input {
   color: #FFFFFF;
   cursor: pointer;
   text-transform: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .menu__icon {
   display: block;
@@ -3253,14 +3280,14 @@ input {
     justify-content: flex-start;
   }
   .whoweare__text,
-.misiunea__item {
+  .misiunea__item {
     min-width: auto;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 28.8%;
     flex: 1 1 28.8%;
   }
   .whoweare__text:not(:last-child),
-.misiunea__item:not(:last-child) {
+  .misiunea__item:not(:last-child) {
     margin-bottom: 40px;
   }
   .blog__media {
@@ -3278,9 +3305,9 @@ input {
     height: 69px;
   }
   .footer__data,
-.footer__data:nth-child(2),
-.footer__data:nth-child(3),
-.footer__data:last-child {
+  .footer__data:nth-child(2),
+  .footer__data:nth-child(3),
+  .footer__data:last-child {
     text-align: left;
   }
   .footer__data:nth-child(2) {
@@ -3614,7 +3641,7 @@ input {
     margin-bottom: 30px;
   }
   .hero__container,
-.hero__clip {
+  .hero__clip {
     height: 700px;
   }
   .whoweare__container {
