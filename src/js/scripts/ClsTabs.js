@@ -65,6 +65,7 @@ class KlsTabs {
   events() {
     this.tabsBtns.forEach((el, i) => {
       el.addEventListener('click', (e) => {
+        console.log(e.target);
         let currentTab = this.tabList.querySelector('[aria-selected]');
 
         if (e.currentTarget !== currentTab) {

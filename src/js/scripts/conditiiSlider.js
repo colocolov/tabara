@@ -16,16 +16,16 @@ let conditiiSlider = new Swiper(".tab-conditii__slider", {
     // для ппрвильного направления
   },
 
-  // slidesPerView: 1.2,
+  slidesPerView: 1.2,
   // расстояние между слайдами
-  // spaceBetween: 20,
-  // breakpoints: {
+  spaceBetween: 20,
+  breakpoints: {
     // when window width is >= 320px
-    // 480: {
-      // slidesPerView: 1,
-      // spaceBetween: 20
-    // },
-  // },
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+  },
 
   // swipeDirection: 'next',
 
@@ -35,10 +35,10 @@ let conditiiSlider = new Swiper(".tab-conditii__slider", {
 
 
   //эффект перехода слайда (только если показ по 1-му слайду)
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
 
   // переключение при клике на слайд
   // slideToClickedSlide: true,
