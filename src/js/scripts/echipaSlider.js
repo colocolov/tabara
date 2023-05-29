@@ -1,4 +1,4 @@
-// слайдер на главной
+// слайдер на Tabara секция ECHIPA
 let echipalSlider = new Swiper(".tab-echipa__slider", {
   loop: true,
   // autoplay: {

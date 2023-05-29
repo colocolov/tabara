@@ -1,4 +1,4 @@
-// слайдер на главной
+// слайдер на главной первый экран
 const heroSlider = new Swiper(".hero__slider", {
   // loop: true,
   autoplay: {

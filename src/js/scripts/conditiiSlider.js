@@ -1,4 +1,4 @@
-// слайдер на главной
+// слайдер на Tabara секция CONDITII
 let conditiiSlider = new Swiper(".tab-conditii__slider", {
   loop: true,
   // autoplay: {

@@ -1,4 +1,4 @@
-// слайдер на главной
+// слайдер на Tabara секция SEZON
 let sezonSlider = new Swiper(".tab-sezon__slider", {
   loop: true,
   // autoplay: {

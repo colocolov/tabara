@@ -19,7 +19,7 @@ if (iconMenu) {
         }
       });
 
-      //document.body.classList.toggle("_lock");
+      document.body.classList.toggle("_lock");
       iconMenu.classList.toggle("_active");
       menuBody.classList.toggle("_active");
       //console.log(menuBody);
@@ -43,11 +43,6 @@ function documentActions(el) {
   }
 }
 
-
-
-
-
-
 // закрытие при клике по меню
 if (menuLink.length) {
   menuLink.forEach((item) => {
@@ -69,10 +64,9 @@ if (menuSocial) {
 }
 
 function removeActiveClass () {
-    //document.body.classList.remove("_lock");
+  document.body.classList.remove("_lock");
   iconMenu.classList.remove("_active");
   menuBody.classList.remove("_active");
   menuSub.classList.remove("_active");
   menuArrow.classList.remove("_active");
-  // menuBody.classList.remove("_active");
 }

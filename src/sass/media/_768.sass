@@ -111,13 +111,26 @@
   .tab-sezon__wrapper
     order: 2
 
-  .tabs__nav
+  .tabs__content
     flex-direction: column
     align-items: center
-  // .tab-program .tabs__content
-  //   display: flex
-  // .tab-program .tabs__nav-figure
-  //   margin-left: 0
+  .tab-program .tabs__nav-btn
+    margin-bottom: 30px
+  .tab-program .tabs__panel
+    min-height: auto
+  .tab-program .tabs__panel-text
+    padding-right: 0
+  .tabs__panel
+    align-items: center
+    flex-direction: column
+    display: flex
+    &:not(:last-child)
+      margin-bottom: 45px
+  .tab-program .tabs__panel p
+    text-align: center
+    &:not(:last-child)
+      margin-bottom: 40px
+
 
   .tab-conditii__container
     flex-direction: column

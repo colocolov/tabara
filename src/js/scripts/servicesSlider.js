@@ -1,4 +1,4 @@
-// слайдер на главной
+// слайдер на главной секция SERVICES
 let servicesSlider = new Swiper(".services__slider", {
   // loop: true,
   // autoplay: {

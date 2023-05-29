@@ -1,4 +1,4 @@
-// слайдер на главной
+// слайдер на главной секция BLOG
 let blogulSlider = new Swiper(".blog__slider", {
   loop: true,
   // autoplay: {

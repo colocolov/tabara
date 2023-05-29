@@ -8,21 +8,26 @@
   <!-- <link rel="stylesheet" href="css/adv.css" /> -->
   <link rel="stylesheet" href="css/style.css?ver=1.2.5" />
   <!-- подключение скриптов -->
-  <!-- <script defer src="js/vendor/swiper-bundle.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+
   <script defer src="js/main.min.js"></script>
   <!-- подключение favicon -->
   <!-- <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon.png" /> -->
   <title>Tabara Vatici</title>
 </head>
 
+
 <body class="body-tabara">
   <div class="wrapper">
     <header class="header">
-  <div class="header__container header__container-tabara">
+  <div class="header__container">
     <a href="index.html" class="header__logo header__logo-tabara">
       <img loading="lazy" class=" _ibg" src="images/tabara-logo.png" alt="">
     </a>
-    <div class="header__menu menu header__menu-tabara">
+    <div class="header__menu menu">
   <nav class="menu__body">
     <div class="menu__container">
       <ul class="menu__lang lang">
@@ -45,7 +50,7 @@
         </li>
         <li class="menu__item"><a href="#" class="menu__link">Serviciile</a></li>
         <li class="menu__item"><a href="#blog" class="menu__link">Blog</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Contacte</a></li>
+        <li class="menu__item"><a href="soon.html" class="menu__link">Contacte</a></li>
       </ul>
       <ul class="menu__social social__list">
         <li class="social__item">
@@ -86,7 +91,7 @@
 
     <main class="main">
       <section class="tab-hero">
-  <div class="tab-hero__container">
+  <div class="tab-hero__container" data-hero="../images/bg/heart.png">
     <div class="tab-hero__date">
       <ul class="tab-hero__list">
         <li class="tab-hero__item">
@@ -113,7 +118,8 @@
       </ul>
     </div>
     <div class="tab-hero__title">
-      <h1 class="heading tab-hero__head">Cum <span class="tabara-star tabara-star--hero">să</span> capeți <span class="tabara-oval">o&nbsp;inimă</span> curată?</h1>
+      <h1 class="heading tab-hero__head">Cum <span class="tabara-star tabara-star--hero">să</span> capeți <span
+              class="tabara-oval">o&nbsp;inimă</span> curată?</h1>
     </div>
   </div><!-- /.container -->
 </section>
@@ -203,25 +209,29 @@
     </div>
 
     <div class="tab-tabara__info">
-      <div class="tab-tabara__text">
-        <p><strong>Buna ziua!</strong><br />
-          Noi suntem recunoscători Domnului pentru un cer liniștit în țara noastră și avem plăcerea să vă anunțăm că
-          anul acesta vor avea loc tabere creştine în „Speranța” Vatici,r-n. Orhei. </p>
-        <p>Ân Moldova am avut deja <span class="tabara-red">25</span> ani la rînd tabere evanghelistice; peste <span
-                class="tabara-orange">30.000</span> de copii, adolescenți și tineri l-au primit pe Domnul Isus Cristos
-          ca și Mîntuitor! Prin intermediul taberei putem să adunăm <span class="tabara-green">250</span> de
-          participanți în fiecare.
-
+      <div class="tab-tabara__descr">
+        <div class="tab-tabara__text">
+          <p><strong>Buna ziua!</strong><br />
+            Noi suntem recunoscători Domnului pentru un cer liniștit în țara noastră și avem plăcerea să vă anunțăm că
+            anul acesta vor avea loc tabere creştine în „Speranța” Vatici,r-n. Orhei.
+          </p>
+        </div>
+        <div class="tab-tabara__text">
+          <p>
+            Ân Moldova am avut deja <span class="tabara-red">25</span> ani la rînd tabere evanghelistice; peste <span
+                  class="tabara-orange">30.000</span> de copii, adolescenți și tineri l-au primit pe Domnul Isus Cristos
+            ca și Mîntuitor! Prin intermediul taberei putem să adunăm <span class="tabara-green">250</span> de
+            participanți în fiecare.
+          </p>
           <a href="#" class="btn-reset btn btn__tabara-register" target="_blank">Registrare</a>
-
-        </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
       <section class="tab-tema">
-  <div class="tab-tema__container">
+  <div class="tab-tema__container" data-tema="../images/bg/heart.png">
     <div class="tab-tema__title">
       <div class="tab-tema__heading">
         <div class="tab-tema__subtitle">anul 2023</div>
@@ -252,7 +262,89 @@
     <h2 class="heading tab-program__head">Programul taberei</h2>
 
     <!--  -->
-    <div class="tabs tab-program__tabs" data-tabs="tab">
+    <div class="tabs tab-program__tabs" data-tabs="tab222">
+      <!-- <ul class="tabs__nav">
+        <li class="tabs__nav-item">
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure figure-grass" data-url="images/tabara/01.jpg"></span>
+          </button>
+        </li>
+        <li class="tabs__nav-item">
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure figure-orange" data-url="images/bg/hero.jpg"></span>
+          </button>
+        </li>
+        <li class="tabs__nav-item">
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure figure-red" data-url="images/bg/misiunea.jpg"></span>
+          </button>
+        </li>
+        <li class="tabs__nav-item">
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure figure-orange" data-url="images/services/01.jpg"></span>
+          </button>
+        </li>
+      </ul> -->
+      <div class="tabs__content">
+
+        <div class="tabs__panel figure-grass">
+          <!-- <div class="tabs__panel-btn"> -->
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure" data-url="images/tabara/01.jpg"></span>
+          </button>
+          <!-- </div> -->
+          <div class="tabs__panel-text">
+            <p>Program bogat, aventuri zilnice și sarcini noi pentru participanți</p>
+            <p>Cântece creștine și activități de seară</p>
+            <p>Viața de zi cu zi ocupată și jocuri sportive</p>
+          </div>
+        </div>
+
+        <div class="tabs__panel figure-orange">
+          <!-- <div class="tabs__panel-btn"> -->
+          <button class="tabs__nav-btn tabs__nav-btn--active" type="button">
+            <span class="tabs__nav-figure" data-url="images/bg/hero.jpg"></span>
+          </button>
+          <!-- </div> -->
+          <div class="tabs__panel-text tabs__panel-text--active">
+            <p>Evenimente de tabără</p>
+            <p>Citirea și studierea Cuvântului lui Dumnezeu</p>
+            <p>Comunicare în grupuri, întrebări / răspunsuri cu vorbitori din străinătate</p>
+          </div>
+        </div>
+
+        <div class="tabs__panel figure-red">
+          <!-- <div class="tabs__panel-btn"> -->
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure" data-url="images/bg/misiunea.jpg"></span>
+          </button>
+          <!-- </div> -->
+          <div class="tabs__panel-text">
+            <p>Sporturi extreme și înot în lac</p>
+            <p>Comunicarea în grupuri despre viață, Biblie și Dumnezeu</p>
+          </div>
+        </div>
+
+        <div class="tabs__panel figure-orange">
+          <!-- <div class="tabs__panel-btn"> -->
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure" data-url="images/services/01.jpg"></span>
+          </button>
+          <!-- </div> -->
+          <div class="tabs__panel-text">
+            <p>Seri atmosferice, cântece de foc de tabără și filme creștine</p>
+            <p>Delicioase, echilibrate și sănătoase 4 mese pe zi</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.tab-program__tabs -->
+
+
+    <!--  -->
+
+    <!-- <div class="tabs tab-program__tabs" data-tabs="tab">
       <ul class="tabs__nav">
         <li class="tabs__nav-item">
           <button class="tabs__nav-btn" type="button">
@@ -295,11 +387,13 @@
           <p>Delicioase, echilibrate și sănătoase 4 mese pe zi</p>
         </div>
       </div>
-    </div>
-    <!-- /.tab-program__tabs -->
+    </div> -->
+
+    <!--  -->
 
   </div>
 </section>
+
       <section class="tab-conditii">
   <div class="tab-conditii__container">
     <div class="tab-conditii__info">

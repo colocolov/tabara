@@ -35,19 +35,47 @@
 
 
   .tabs
-    &__nav
-      margin-bottom: 67px
+    &__content
+      display: flex
+      // grid-template-columns: repeat(4, 23.5%)
+      column-gap: 4px
+      & div
+        &:nth-child(1)
+          span::after,
+          & .tabs__nav-btn--active span::before
+            background-color: $green
+        &:nth-child(2)
+          span::after,
+          & .tabs__nav-btn--active span::before
+            background-color: $orange-tab
+        &:nth-child(3)
+          span::after,
+          & .tabs__nav-btn--active span::before
+            background-color: $red-tab
+        &:nth-child(4)
+          span::after,
+          & .tabs__nav-btn--active span::before
+            background-color: $orange-tab
 
-    &__nav-item
+    &__panel
       flex: 1 0 25%
-
+      min-height: 238px
+      &-text
+        display: none
+        padding-right: 30px
+        &--active
+          display: block
+      p:not(:last-child)
+        line-height: 1.125
+        margin-bottom: 74px
 
     &__nav-btn
+      margin-bottom: 67px
       // position: relative
       background: transparent
       cursor: pointer
       &--active
-        & .tabs__nav-figure
+        & span
           position: relative
           background: transparent
           &::before
@@ -56,32 +84,24 @@
             top: calc( 50% - 11px )
             left: 0
             height: 23px
-            // background-color: $white
+            background-color: $white
             transition: transform .3s ease
             transform: rotate(45deg)
           &::after
             top: calc( 50% - 11px )
+            border-radius: 0
             left: 0
             height: 23px
             // background-color: $white
             transition: transform .3s ease
             transform: rotate(-45deg)
-        & .figure
-          &-grass::after
-            background: $green
-          &-green::after
-            background: $green-tab
-          &-red::after
-            background: $red-tab
-          &-orange::after
-            background: $orange-tab
-
 
     &__nav-figure
       width: 100px
       height: 100px
       display: flex
-      margin-left: 15px
+      position: relative
+      // margin-left: 15px
       &::before
         content: ''
         transition: transform .3s ease
@@ -91,45 +111,13 @@
         height: 100px
       &::after
         content: ''
-        top: calc( 50% - 11px )
+        top: 0
+        // top: calc( 50% - 11px )
+        border-radius: 50%
         position: absolute
         width: 100px
         height: 100px
         transition: transform .3s ease
-
-    &__content
-      display: grid
-      grid-template-columns: repeat(4, 23.5%)
-      column-gap: 20px
-
-    &__panel
-      min-height: 238px
-      line-height: 1.125
-      &:first-child
-        padding-left: 20px
-      &:nth-child(2)
-        grid-column: 2/3
-      &:nth-child(3)
-        grid-column: 3/4
-      &:nth-child(4)
-        grid-column: 4/5
-      p
-        font-size: 15.2px
-        &:not(:last-child)
-          margin-bottom: 74px
-  .figure
-    &-grass
-      &::before
-        background: $green
-    &-green
-      &::before
-        background: $green-tab
-    &-red
-      &::before
-        background: $red-tab
-    &-orange
-      &::before
-        background: $orange-tab
 
 
 
