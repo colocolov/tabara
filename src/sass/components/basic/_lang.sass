@@ -11,8 +11,13 @@
     padding: 9px 13px 10px 12px
     text-transform: uppercase
     cursor: pointer
+    transition: color 0.3s ease-in, background 0.5s ease-in
     &:not(:last-child)
       margin-right: 50px
+    @media (any-hover: hover)
+      &:hover
+        background: $green
+        color: $black
     &._active
       background: $green
       color: $black

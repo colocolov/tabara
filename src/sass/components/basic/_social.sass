@@ -12,12 +12,23 @@
       margin-right: 40px
     @media (max-width: 768px)
       margin-bottom: 20px
+    @media (any-hover: hover)
+      &:hover
+        a
+          color: $green
+        svg
+          stroke: $green
   &__link
+    transition: color 0.3s ease-in
   &__icon
     margin-right: 10px
     width: 30px
     height: 30px
     svg
+      transition: stroke 0.3s ease-in
       height: 100%
       width: 100%
+      stroke: $white
+      stroke-width: 2
+
 
