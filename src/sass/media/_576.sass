@@ -114,8 +114,14 @@
   .tab-tabara__container::before
     top: 91px
     right: -85px
-  .tab-tabara__text p
-    flex: 1 1 50%
+  .tab-tabara__info
+    flex-wrap: wrap
+    column-gap: normal
+  .tab-tabara__text
+    flex: 1 1 75%
+    max-width: none
+    &:not(:last-child)
+      margin-bottom: 50px
   .tab-tabara__title
     margin-bottom: 87px
   .btn__tabara-register
@@ -155,6 +161,8 @@
 
   .tab-program
     padding-top: 81px
+  .tab-program__head
+    margin-bottom: 86px
 
   .tab-conditii
     padding-top: 83px

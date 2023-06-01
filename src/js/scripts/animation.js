@@ -1,4 +1,4 @@
-const animHome = document.querySelector('.body-home2');
+const animHome = document.querySelector('.body-home');
 if (animHome) {
 
   // Whoweare title
