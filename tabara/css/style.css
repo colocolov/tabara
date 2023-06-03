@@ -2521,6 +2521,15 @@ input {
   height: 100%;
   z-index: -2;
 }
+.tab-hero__bg {
+  content: "";
+  position: absolute;
+  top: 17%;
+  left: 21%;
+  width: 584px;
+  height: 584px;
+  z-index: -1;
+}
 .tab-hero__item {
   display: -webkit-box;
   display: -ms-flexbox;

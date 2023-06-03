@@ -11,8 +11,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
-
-
   <script defer src="js/main.min.js"></script>
   <!-- подключение favicon -->
   <!-- <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon.png" /> -->
@@ -91,7 +89,10 @@
 
     <main class="main">
       <section class="tab-hero">
-  <div class="tab-hero__container" data-hero="../images/bg/heart.png">
+  <div class="tab-hero__container" data-hero="../images/bg2/heart.png">
+    <div class="tab-hero__bg">
+      <img src="images/bg/heart.png" loading="lazy" width="" height="" alt="">
+    </div>
     <div class="tab-hero__date">
       <ul class="tab-hero__list">
         <li class="tab-hero__item">
@@ -139,7 +140,8 @@
             <div class="tab-echipa__position">Coordonator al Programului Taberei</div>
             <div class="tab-echipa__text">
               <p><strong>Buna ziua!</strong></p>
-              <p>Iubesc această slujire pentru că îl iubesc pe Domnul și vreau să împlinesc o mare însărcinare și cred că prin predicarea tinerilor se poate ajunge la familie și la toată Moldova</p>
+              <p>Iubesc această slujire pentru că îl iubesc pe Domnul și vreau să împlinesc o mare însărcinare și cred
+                că prin predicarea tinerilor se poate ajunge la familie și la toată Moldova</p>
             </div>
           </div>
           <div class="tab-echipa__img tab__img _ibg">
@@ -156,34 +158,16 @@
         </div><!-- /.slide -->
         <div class="swiper-slide tab-echipa__slide">
           <div class="tab-echipa__info">
-            <div class="tab-echipa__name">Степанова Елизавета</div>
-            <div class="tab-echipa__position">Coordonator</div>
+            <div class="tab-echipa__name">MIHAI SINOGACI</div>
+            <div class="tab-echipa__position">Președintele Misiunii Euroasiatice Baptistă</div>
             <div class="tab-echipa__text">
-              <p>Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Пунктуация взобравшись пор буквенных мир буквоград? Агентство подзаголовок подпоясал имени взгляд даль заголовок .</p>
+              <p><strong>Buna ziua!</strong></p>
+              <p>Tabăra este doar începutul vieții cu Hristos, deoarece în procesul acestor evenimente, Dumnezeu va
+                câștiga sufletele tinerilor și le va pregati pentru slujire.</p>
             </div>
           </div>
           <div class="tab-echipa__img tab__img _ibg">
-            <img loading="lazy" class="image" src="images/echipa/02.jpg" alt="">
-            <div class="tab__img-dots"></div>
-          </div><!-- /.tab-echipa__img -->
-          <div class="navigation tab-echipa__navigation">
-            <div class="navigation__btn navigation__btn-next tab-echipa-next">
-              <svg class="navigation__btn-svg" aria-hidden="true">
-                <use xlink:href="images/icons/sprite.svg#arrcircle"></use>
-              </svg>
-            </div><!-- /.arrow-next -->
-          </div><!-- /.pagination__nav -->
-        </div><!-- /.slide -->
-        <div class="swiper-slide tab-echipa__slide">
-          <div class="tab-echipa__info">
-            <div class="tab-echipa__name">Попов Даниил</div>
-            <div class="tab-echipa__position">Supervizor al Programului Taberei</div>
-            <div class="tab-echipa__text">
-              <p>Iubesc această slujire pentru că îl iubesc pe Domnul și vreau să împlinesc o mare însărcinare și cred că prin predicarea tinerilor se poate ajunge la familie și la toată Moldova</p>
-            </div>
-          </div>
-          <div class="tab-echipa__img tab__img _ibg">
-            <img loading="lazy" class="image" src="images/echipa/03.jpg" alt="">
+            <img loading="lazy" class="image" src="images/echipa/04.jpg" alt="">
             <div class="tab__img-dots"></div>
           </div><!-- /.tab-echipa__img -->
           <div class="navigation tab-echipa__navigation">
@@ -291,11 +275,11 @@
 
         <div class="tabs__panel figure-grass">
           <!-- <div class="tabs__panel-btn"> -->
-          <button class="tabs__nav-btn" type="button">
+          <button class="tabs__nav-btn tabs__nav-btn--active" type="button">
             <span class="tabs__nav-figure" data-url="images/tabara/01.jpg"></span>
           </button>
           <!-- </div> -->
-          <div class="tabs__panel-text">
+          <div class="tabs__panel-text tabs__panel-text--active">
             <p>Program bogat, aventuri zilnice și sarcini noi pentru participanți</p>
             <p>Cântece creștine și activități de seară</p>
             <p>Viața de zi cu zi ocupată și jocuri sportive</p>
@@ -304,11 +288,11 @@
 
         <div class="tabs__panel figure-orange">
           <!-- <div class="tabs__panel-btn"> -->
-          <button class="tabs__nav-btn tabs__nav-btn--active" type="button">
-            <span class="tabs__nav-figure" data-url="images/bg/hero.jpg"></span>
+          <button class="tabs__nav-btn" type="button">
+            <span class="tabs__nav-figure" data-url="images/tabara/02.jpg"></span>
           </button>
           <!-- </div> -->
-          <div class="tabs__panel-text tabs__panel-text--active">
+          <div class="tabs__panel-text">
             <p>Evenimente de tabără</p>
             <p>Citirea și studierea Cuvântului lui Dumnezeu</p>
             <p>Comunicare în grupuri, întrebări / răspunsuri cu vorbitori din străinătate</p>
@@ -318,7 +302,7 @@
         <div class="tabs__panel figure-red">
           <!-- <div class="tabs__panel-btn"> -->
           <button class="tabs__nav-btn" type="button">
-            <span class="tabs__nav-figure" data-url="images/bg/misiunea.jpg"></span>
+            <span class="tabs__nav-figure" data-url="images/tabara/03.jpg"></span>
           </button>
           <!-- </div> -->
           <div class="tabs__panel-text">
@@ -330,7 +314,7 @@
         <div class="tabs__panel figure-orange">
           <!-- <div class="tabs__panel-btn"> -->
           <button class="tabs__nav-btn" type="button">
-            <span class="tabs__nav-figure" data-url="images/services/01.jpg"></span>
+            <span class="tabs__nav-figure" data-url="images/tabara/04.jpg"></span>
           </button>
           <!-- </div> -->
           <div class="tabs__panel-text">
@@ -418,14 +402,28 @@
         <!-- /.slide -->
         <div class="swiper-slide tab-conditii__slide">
           <div class="tab-conditii__img tab__img _ibg">
-            <img src="images/slider/02.jpg" loading="lazy" alt="">
+            <img src="images/slider/04.jpg" loading="lazy" alt="">
             <div class="tab__img-dots"></div>
           </div>
         </div>
         <!-- /.slide -->
         <div class="swiper-slide tab-conditii__slide">
           <div class="tab-conditii__img tab__img _ibg">
-            <img src="images/bg/misiunea.jpg" loading="lazy" alt="">
+            <img src="images/slider/05.jpg" loading="lazy" alt="">
+            <div class="tab__img-dots"></div>
+          </div>
+        </div>
+        <!-- /.slide -->
+        <div class="swiper-slide tab-conditii__slide">
+          <div class="tab-conditii__img tab__img _ibg">
+            <img src="images/slider/06.jpg" loading="lazy" alt="">
+            <div class="tab__img-dots"></div>
+          </div>
+        </div>
+        <!-- /.slide -->
+        <div class="swiper-slide tab-conditii__slide">
+          <div class="tab-conditii__img tab__img _ibg">
+            <img src="images/slider/07.jpg" loading="lazy" alt="">
             <div class="tab__img-dots"></div>
           </div>
         </div>
@@ -520,7 +518,7 @@
           </div>
           <div class="tab-sezon__data">
             <div class="tab-sezon__name">seazon</div>
-            <div class="tab-sezon__year">2021</div>
+            <div class="tab-sezon__year">2022</div>
           </div>
         </a><!-- /.tab-sezon__slide -->
 
@@ -531,7 +529,7 @@
           </div>
           <div class="tab-sezon__data">
             <div class="tab-sezon__name">seazon</div>
-            <div class="tab-sezon__year">2021</div>
+            <div class="tab-sezon__year">2023</div>
           </div>
         </a><!-- /.tab-sezon__slide -->
 
@@ -553,7 +551,7 @@
           </div>
           <div class="tab-sezon__data">
             <div class="tab-sezon__name">seazon</div>
-            <div class="tab-sezon__year">2021</div>
+            <div class="tab-sezon__year">2022</div>
           </div>
         </div><!-- /.tab-sezon__slide -->
       </div>
