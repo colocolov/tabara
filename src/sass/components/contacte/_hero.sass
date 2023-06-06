@@ -1,0 +1,40 @@
+.contacte-top
+  border-bottom: 1px solid $white
+  &__container
+    padding-top: 200px
+    padding-bottom: 130px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 56px
+      right: 38px
+      width: 145px
+      height: 500px
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+      background-color: #BFD2D9
+      filter: blur(150px)
+      transform: rotate(62.49deg)
+
+  &__info
+    @media (max-width: 576px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+  &__head
+    font-size: 100px
+    line-height: 95.7%
+    letter-spacing: -0.05em
+    text-transform: uppercase
+    border-bottom: 2px solid $white
+    display: inline-block
+    margin-bottom: 10px
+  &__text
+    p
+      &:not(:last-child)
+        margin-bottom: 10px
+      @media (max-width: 576px)
+        text-align: center
+

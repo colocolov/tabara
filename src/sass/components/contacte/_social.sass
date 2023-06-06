@@ -1,0 +1,32 @@
+.contacte
+  flex: 1 1 50%
+  margin-left: 12% // 150/620
+  @media (max-width: 1024px)
+    margin-left: 30px
+  @media (max-width: 768px)
+    margin-bottom: 100px
+    margin-left: 0
+
+  & > div
+    margin-bottom: 30px
+  &__phone
+    a:last-child
+      margin-left: 30px
+    a
+      transition: color 0.3s ease-in
+      @media (any-hover: hover)
+        &:hover
+          color: $green
+  &__email,
+  &__site
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $green
+
+  &__social
+    display: flex
+    align-items: center
+    & .social__item:not(:last-child)
+      margin-right: 71px
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ro">
+@include('html/head.html', { "title":"Contacte" })
+
+<body class="body-contacte">
+  <div class="wrapper">
+    @include('html/header.html')
+    <main class="main">
+      @include('html/contacte/_hero.html')
+      <div class="contacte-bottom">
+        <div class="contacte-bottom__container">
+          @include('html/contacte/_form.html')
+          @include('html/contacte/_contacte.html')
+        </div>
+      </div>
+    </main>
+    @include('html/footer.html')
+  </div>
+</body>
+
+</html>
