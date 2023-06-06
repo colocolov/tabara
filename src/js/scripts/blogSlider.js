@@ -16,6 +16,10 @@ let blogulSlider = new Swiper(".blog__slider", {
     // для ппрвильного направления
   },
 
+  preloadImages: false,
+  lazy: {
+    loadPrevNext: true,
+  },
   // swipeDirection: 'next',
 
   // controller: {

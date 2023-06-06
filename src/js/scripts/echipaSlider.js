@@ -22,6 +22,11 @@ let echipalSlider = new Swiper(".tab-echipa__slider", {
   //   inverse: false,
   // },
 
+  preloadImages: false,
+  lazy: {
+    loadPrevNext: true,
+  },
+
 
   //эффект перехода слайда (только если показ по 1-му слайду)
   effect: "fade",

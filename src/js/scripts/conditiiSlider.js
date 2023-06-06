@@ -26,6 +26,11 @@ let conditiiSlider = new Swiper(".tab-conditii__slider", {
       spaceBetween: 0
     },
   },
+  
+  preloadImages: false,
+  lazy: {
+    loadPrevNext: true,
+  },
 
   // swipeDirection: 'next',
 

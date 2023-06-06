@@ -22,6 +22,11 @@ let sezonSlider = new Swiper(".tab-sezon__slider", {
   //   inverse: false,
   // },
 
+  preloadImages: false,
+  lazy: {
+    loadPrevNext: true,
+  },
+
   // slideClass: "",
   // width: 288,
   slidesPerView: 1.2,

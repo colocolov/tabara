@@ -1,3 +1,5 @@
+window.addEventListener("load", function () {
+
 const animHome = document.querySelector('.body-home');
 if (animHome) {
 
@@ -114,3 +116,6 @@ if (animTabara) {
   });
 
 }
+
+  // end load
+});

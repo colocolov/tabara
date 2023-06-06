@@ -16,6 +16,11 @@ let servicesSlider = new Swiper(".services__slider", {
     // для ппрвильного направления
   },
 
+  preloadImages: false,
+  lazy: {
+    loadPrevNext: true,
+  },
+
   slidesPerView: 1.3,
   // расстояние между слайдами
   spaceBetween: 20,
