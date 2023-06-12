@@ -1250,6 +1250,7 @@ input {
   top: 0;
   right: -100%;
   left: 100%;
+  bottom: 0;
   padding: 100px 85px 60px 50px;
   background: -webkit-gradient(linear, left top, left bottom, from(#002535), to(transparent)) #003851;
   background: -o-linear-gradient(top, #002535 0%, transparent 100%) #003851;
@@ -1703,6 +1704,10 @@ input {
 .btn__contacte-top {
   margin-top: 54px;
   font-size: 30px;
+}
+.btn__galary {
+  font-size: 30px;
+  color: #000000;
 }
 
 .navigation {
@@ -3658,6 +3663,12 @@ input {
   order: 1;
 }
 
+.wpcf7-not-valid-tip {
+  font-weight: 600;
+  position: relative;
+  bottom: 6px;
+}
+
 .contacte {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 50%;
@@ -3678,8 +3689,8 @@ input {
 .contacte > div {
   margin-bottom: 30px;
 }
-.contacte__phone a:last-child {
-  margin-left: 30px;
+.contacte__phone a:first-child {
+  margin-right: 30px;
 }
 .contacte__phone a {
   -webkit-transition: color 0.3s ease-in;
@@ -3711,6 +3722,76 @@ input {
 }
 .contacte__social .social__item:not(:last-child) {
   margin-right: 71px;
+}
+
+.galary {
+  position: relative;
+  background-color: #22646E;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.galary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.galary__container {
+  position: relative;
+  z-index: 2;
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding-bottom: 100px;
+}
+.galary__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+.galary__head {
+  max-width: 570px;
+  font-size: 50px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  margin-right: 50px;
+}
+
+.galary-photo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #3B89AC;
+}
+.galary-photo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.galary-photo__img {
+  padding-bottom: 31.5%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 48%;
+  flex: 1 1 48%;
 }
 
 .footer {
