@@ -5,15 +5,15 @@
     display: flex
     flex-direction: column
     position: relative
-    &::before
-      content: ''
-      position: absolute
-      background: var(--bgImgTabTema) center / cover no-repeat
-      top: 23%
-      left: 1%
-      width: 584px
-      height: 584px
-      z-index: -1
+    // &::before
+      // content: ''
+      // position: absolute
+      // // background: var(--bgImgTabTema) center / cover no-repeat
+      // top: 23%
+      // left: 1%
+      // width: 584px
+      // height: 584px
+      // z-index: -1
     &::after
       content: ''
       position: absolute
@@ -25,7 +25,8 @@
       z-index: -2
       filter: blur(12px)
   &__title
-    margin-bottom: 196px
+    // margin-bottom: 196px
+    margin-bottom: 62px
     display: flex
 
   &__heading
@@ -45,9 +46,23 @@
     span
       color: $red-tab
 
+  &__info
+    display: flex
+    align-items: center
+
+  &__bg
+    // content: ''
+    // position: absolute
+    // top: 23%
+    // left: 1%
+    width: 584px
+    height: 584px
+    z-index: -1
+    margin-right: 35px
+
   &__formular
     flex: 1 0 50%
-    align-self: flex-end
+    // align-self: flex-end
     width: 49%
     color: $red-tab
     a
