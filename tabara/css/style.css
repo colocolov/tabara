@@ -1364,10 +1364,10 @@ input {
     font-size: 32px;
   }
 }
-.menu__link {
+.menu__item a {
   position: relative;
 }
-.menu__link::before {
+.menu__item a::before {
   position: absolute;
   content: "";
   display: block;
@@ -1380,14 +1380,14 @@ input {
   transition: width 0.5s ease;
 }
 @media (any-hover: hover) {
-  .menu__link:hover::before {
+  .menu__item a:hover::before {
     width: 100%;
   }
-  .menu__link:hover:last-child a {
+  .menu__item a:hover:last-child a {
     color: #FFFFFF;
   }
 }
-.menu__link._active::before {
+.menu__item.current-menu-item a::before {
   width: 100%;
 }
 .menu__arrow {
@@ -2884,11 +2884,30 @@ input {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .tab-tema__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 .tab-tema__bg {
   width: 584px;
   height: 584px;
   z-index: -1;
   margin-right: 35px;
+}
+@media (max-width: 992px) {
+  .tab-tema__bg {
+    width: 70%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .tab-tema__bg {
+    width: 100%;
+  }
 }
 .tab-tema__formular {
   -webkit-box-flex: 1;
@@ -2896,6 +2915,12 @@ input {
   flex: 1 0 50%;
   width: 49%;
   color: #AB3E22;
+}
+@media (max-width: 992px) {
+  .tab-tema__formular {
+    margin-top: -30%;
+    z-index: 5;
+  }
 }
 .tab-tema__formular a {
   color: #FFFFFF;
@@ -3037,6 +3062,11 @@ input {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 .tab-program .tabs__nav-figure::before {
   content: "";
@@ -3061,6 +3091,13 @@ input {
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+@media (any-hover: hover) {
+  .tab-program .tabs__nav-figure:hover {
+    -webkit-transform: scale(1.1) rotate(180deg);
+    -ms-transform: scale(1.1) rotate(180deg);
+    transform: scale(1.1) rotate(180deg);
+  }
 }
 
 .tab-conditii {
@@ -3210,7 +3247,7 @@ input {
   -ms-flex-wrap: wrap-reverse;
   flex-wrap: wrap-reverse;
   min-width: 630px;
-  max-height: 500px;
+  max-height: 550px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -3235,6 +3272,7 @@ input {
 }
 .tab-lucruri__item:nth-child(1) div {
   background-color: #AB3E22;
+  color: #FFFFFF;
 }
 .tab-lucruri__item:nth-child(2) div {
   background-color: #A7FF4F;
@@ -3284,6 +3322,7 @@ input {
   width: 1268px;
   height: 830px;
   z-index: -2;
+  animation: move 15s infinite alternate-reverse ease-in 2s;
 }
 .tab-sezon__container::after {
   content: "";
@@ -3295,6 +3334,7 @@ input {
   width: 158px;
   height: 158px;
   z-index: -1;
+  animation: move 10s infinite alternate-reverse ease-in 1s;
 }
 .tab-sezon__head {
   margin-bottom: 117px;
@@ -3314,6 +3354,8 @@ input {
   width: 158px;
   height: 158px;
   z-index: -2;
+  -webkit-animation: move 10s infinite ease-in 1s;
+  animation: move 10s infinite ease-in 1s;
 }
 .tab-sezon__wrapper {
   -webkit-box-sizing: border-box;
@@ -3384,6 +3426,9 @@ input {
   -webkit-transform: rotate(62.49deg);
   -ms-transform: rotate(62.49deg);
   transform: rotate(62.49deg);
+}
+.contacte-top__info a {
+  color: #000000;
 }
 @media (max-width: 576px) {
   .contacte-top__info {
@@ -4781,7 +4826,6 @@ input {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 315px;
   }
   .tab-tema__heading {
     margin-bottom: 49px;

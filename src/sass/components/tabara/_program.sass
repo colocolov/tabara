@@ -102,6 +102,7 @@
       display: flex
       position: relative
       // margin-left: 15px
+      transition: transform 0.5s ease
       &::before
         content: ''
         transition: transform .3s ease
@@ -118,6 +119,10 @@
         width: 100px
         height: 100px
         transition: transform .3s ease
+      @media (any-hover: hover)
+        &:hover
+          transform: scale(1.1) rotate(180deg)
+
 
 
 
