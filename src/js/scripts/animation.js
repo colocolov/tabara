@@ -95,7 +95,7 @@ if (animTabara) {
   // Whoweare title
   let heart = gsap.timeline({
     scrollTrigger: {
-      trigger: '.tab-hero',
+      trigger: '.tab-hero2',
       start: 'top top',
       // end: 'bottom bottom',
       toggleActions: 'play none none reverse',
@@ -104,7 +104,7 @@ if (animTabara) {
     }
   });
 
-  heart.to(".tab-hero__bg", {
+  heart.to(".tab-hero__bg1", {
     // '--beforeScale': 0.5,
     // opacity: 0,
     // rotate:-5,
@@ -118,7 +118,7 @@ if (animTabara) {
   // Whoweare title
   let heart2 = gsap.timeline({
     scrollTrigger: {
-      trigger: '.tab-tema',
+      trigger: '.tab-tema2',
       start: 'top top',
       // end: 'bottom bottom',
       toggleActions: 'play none none reverse',
@@ -127,7 +127,7 @@ if (animTabara) {
     }
   });
 
-  heart2.to(".tab-tema__bg", {
+  heart2.to(".tab-tema__bg1", {
     // '--beforeScale': 0.5,
     // opacity: 0,
     // rotate:-5,
