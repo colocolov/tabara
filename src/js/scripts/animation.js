@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
 
 const animHome = document.querySelector('.body-home');
-if (animHome) {
+if (animHome2) {
 
   // Whoweare title
   gsap.from(".whoweare__head", {
